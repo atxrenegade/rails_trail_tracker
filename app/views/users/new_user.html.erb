@@ -1,0 +1,12 @@
+<h3> Sign Up </h3>
+<%= form_tag users_path %>
+<label>Username: </label>
+<%= text_field_tag, 'user[name]'%>
+<label>Email Address: </label>
+<%= text_field_tag, 'user[email]'%>
+<label>Password: </label>
+<%= text_field_tag, 'user[password]'%>
+<label>Password Confirmation: </label>
+<%= text_field_tag, 'user[password_confirmation]'%>
+<%= submit_tag 'Save' %>
+<% end %>
