@@ -1,5 +1,5 @@
 <h3> Sign Up </h3>
-<%= form_for @user %>
+<%= form_for sign_up_path(@user) do |f| %>
 	<% if @user.errors.any? %>
 	  <div id="error_explanation">
 		<h2>Please correct the following errors:</h2>
