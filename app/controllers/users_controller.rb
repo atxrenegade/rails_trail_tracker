@@ -6,11 +6,17 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.create(user_params)
-		redirect_to '/trails/index'
+		if @user
+			session[:id] = @user[:id]
+			binding.pry
+			redirect_to '/trails/index'
+		else
+			render :sign_up
+		end
 	end
 
 	private
 	def user_params
-		params.require(:user).permit(:name, :email, :password)
-	end	
+		params.require(:user).permit(:name, :email, :password, :password_confirmation)
+	end
 end
