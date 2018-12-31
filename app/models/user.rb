@@ -14,8 +14,7 @@ class User < ApplicationRecord
 
 
 	validates :password,
-		presence: { message: "Email address cannot be blank"},
-		uniqueness: { message: "This email address is already associated with an existing account. Please sign in." },
+		presence: { message: "Password cannot be blank"},
 		confirmation: { message: "Passwords must match."}
 
 end
