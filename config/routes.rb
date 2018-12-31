@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   resources :hikes
   resources :trails
 
-  get '/signup', to: 'users#new'
-  post '/signup', to: 'users#create'
+  get '/sign_up', to: 'users#new'
+  post '/sign_up', to: 'users#create'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
 
