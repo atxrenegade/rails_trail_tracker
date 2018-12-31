@@ -8,7 +8,6 @@ class UsersController < ApplicationController
 		@user = User.create(user_params)
 		if @user
 			session[:id] = @user[:id]
-			binding.pry
 			redirect_to '/trails/index'
 		else
 			render :sign_up
