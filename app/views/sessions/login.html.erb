@@ -1,7 +1,7 @@
 <h3> Log In </h3>
-<%= form_tag users_path %>
+<%= form_tag login_path %>
 <label>Username: </label>
-<%= text_field_tag 'user[name]'%>
+<%= text_field_tag 'user[name]'%><br>
 <label>Password: </label>
-<%= text_field_tag 'user[password]'%>
+<%= text_field_tag 'user[password]'%><br><br>
 <%= submit_tag 'Log In' %>
