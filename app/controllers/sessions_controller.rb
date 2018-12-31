@@ -6,6 +6,6 @@ class SessionsController < ApplicationController
 
 	def create
 		@session = Session.create
-		redirect_to '/users/show'
+		redirect_to '/trails/index'
 	end
 end
