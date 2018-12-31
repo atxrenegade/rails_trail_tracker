@@ -4,7 +4,20 @@ class SessionsController < ApplicationController
 	end
 
 	def create
-		@session = Session.create
-		redirect_to '/trails/index'
+		#validate username and login, authenticate, set session hash
+		@user = User.find_by(params[:user][:name])
+		if !@user || @user.nil?
+			return render :login
+		elsif @user && @user.autheticate(params[:user][:password])
+			session[:id] = @user[:id]
+			return redirect_to '/trails/index'
+		else
+			return render :login
+		end
+	end
+
+	def destroy
+		session.delete [:name]
+		redirect_to '/login'
 	end
 end

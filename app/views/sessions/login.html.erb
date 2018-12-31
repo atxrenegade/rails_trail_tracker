@@ -1,5 +1,5 @@
-<h3> Log In </h3>
-<%= form_tag login_path %>
+<h2> Log In </h2>
+<%= form_tag ({controller: 'sessions', action: 'create', method: 'post'} do %>
 <label>Username: </label>
 <%= text_field_tag 'user[name]'%><br>
 <label>Password: </label>
