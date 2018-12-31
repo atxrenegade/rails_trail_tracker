@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 	has_secure_password
 	has_many :hikes
-	has_many :trails, through: :users
+	has_many :trails, through: :hikes
 
 	validates :name, presence: true
 	validates :name, uniqueness: true
