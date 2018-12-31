@@ -4,17 +4,16 @@ class User < ApplicationRecord
 	has_many :trails, through: :hikes
 
 	validates :name,
-		presence: { message: "Username cannot be blank"},
+		presence: { message: "cannot be blank"},
 		uniqueness: { message: "This username has already been taken." }
 
 	validates :email,
 		format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,  message: "Enter a valid email address" },
-		presence: { message: "Email address cannot be blank"},
+		presence: true,
 		uniqueness: { message: "This email address is already associated with an existing account. Please sign in." }
 
-
 	validates :password,
-		presence: { message: "Password cannot be blank"},
-		confirmation: { message: "Passwords must match."}
+		presence: true,
+		confirmation: { message: "must match."}
 
 end

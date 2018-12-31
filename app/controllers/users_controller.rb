@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.create(user_params)
 		if @user.save
-			session[:id] = user[:id]
+			session[:id] = @user[:id]
 			redirect_to '/trails/index'
 		else
 			render :sign_up
