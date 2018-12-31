@@ -1,7 +1,8 @@
 <h2> Log In </h2>
-<%= form_tag ({controller: 'sessions', action: 'create', method: 'post'} do %>
-<label>Username: </label>
-<%= text_field_tag 'user[name]'%><br>
-<label>Password: </label>
-<%= text_field_tag 'user[password]'%><br><br>
-<%= submit_tag 'Log In' %>
+	<%= form_tag({controller: 'sessions', action: 'create', method: 'post'}) do %>
+	<label>Username: </label>
+	<%= text_field_tag 'user[name]'%><br>
+	<label>Password: </label>
+	<%= text_field_tag 'user[password]'%><br><br>
+	<%= submit_tag 'Log In' %>
+<% end %>
