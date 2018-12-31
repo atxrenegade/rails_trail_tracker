@@ -6,7 +6,7 @@ class CreateTrails < ActiveRecord::Migration[5.2]
 	  t.string :description
 	  t.string :start_point
 	  t.string :end_point
-	  t.string :length_of_hike, default: null
+	  t.string :length_of_hike, null: true
 	  t.string :terrain
 	  t.string :notes
 

@@ -10,6 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_11_15_044909) do
+
+  create_table "hikes", force: :cascade do |t|
+    t.string "date_of_hike"
+    t.text "comments"
+    t.integer "user_id"
+    t.integer "trail_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trails", force: :cascade do |t|
+    t.string "name"
+    t.string "difficulty_rating"
+    t.string "description"
+    t.string "start_point"
+    t.string "end_point"
+    t.string "length_of_hike"
+    t.string "terrain"
+    t.string "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
