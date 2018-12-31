@@ -1,11 +1,22 @@
 <h3> Sign Up </h3>
-<%= form_tag sign_up_path %>
-<label>Username: </label>
-<%= text_field_tag 'user[name]'%><br>
-<label>Email Address: </label>
-<%= text_field_tag 'user[email]'%><br>
-<label>Password: </label>
-<%= text_field_tag 'user[password]'%><br>
-<label>Password Confirmation: </label>
-<%= text_field_tag 'user[password_confirmation]'%><br><br>
-<%= submit_tag 'Save' %>
+<%= form_for @user %>
+	<% if @user.errors.any? %>
+	  <div id="error_explanation">
+		<h2>Please correct the following errors:</h2>
+		<ul>
+		  <% @user.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+		  <% end %>
+		</ul>
+	  </div>
+	<% end %>
+	<%= f.label 'Username:' %>
+	<%= text_field 'name'%><br>
+	<%= f.label 'Email Address:' %>
+	<%= f.text_field 'email'%><br>
+	<%= f.label 'Password:' %>
+	<%= f.text_field 'password'%><br>
+	<%= f.label 'Password Confirmation:' %>
+	<%= f.text_field 'password_confirmation' %><br><br>
+	<%= f.submit 'Save' %>
+<% end %>
