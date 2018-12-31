@@ -5,9 +5,9 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		user = User.new(user_params)
-		if user.valid?
-			user.save
+		@user = User.new(user_params)
+		#binding.pry
+		if @user.save
 			session[:id] = user[:id]
 			redirect_to '/trails/index'
 		else
