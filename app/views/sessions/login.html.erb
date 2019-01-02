@@ -8,4 +8,5 @@
 	<label>Password: </label>
 	<%= text_field_tag 'user[password]'%><br><br>
 	<%= submit_tag 'Log In' %>
-<% end %>
+<% end %><br>
+<%= link_to "Log In with Facebook", 'auth/facebook' %>
