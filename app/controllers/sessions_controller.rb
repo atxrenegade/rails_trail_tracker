@@ -4,17 +4,16 @@ class SessionsController < ApplicationController
 	end
 
 	def create
-		#validate username and login, authenticate, set session hash
-
-		#debug login and validation
 		@user = User.find_by(name: params[:user][:name])
 		if !@user || @user.nil?
-			return render :login
+			flash[:notice] = "Please enter a valid username"
+			render :login
 		elsif @user && @user.authenticate(params[:user][:password])
 			session[:id] = @user[:id]
-			return redirect_to '/trails/index'
+			redirect_to '/trails/index'
 		else
-			return render :login
+			flash[:notice] = "Please enter the correct password"
+			render :login
 		end
 	end
 
