@@ -6,11 +6,13 @@ class SessionsController < ApplicationController
 	def create
 		u = request.env['omniauth.auth']
 		if u.provider == "facebook"
+			binding.pry
 			@user = User.find_or_create_by(uid: auth['uid']) do |u|
 				u.name = auth['info']['name']
 				u.email = auth['info']['email']
 				u.image = auth['info']['name']
-				session[:id] = @user[:id]
+			end
+				session[:user_id] = @user.id
 				redirect_to '/trails/index'
 		else
 			@user = User.find_by(name: params[:user][:name])
