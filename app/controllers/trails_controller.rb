@@ -5,12 +5,12 @@ class TrailsController < ApplicationController
 	end
 
 	def new
-		
+		@trail = Trail.new
 	end
 
 	def create
 		@trail = Trail.create(trail_params)
-		redirect_to trail_path
+		redirect_to trail_path(@trail)
 	end
 
 	private
