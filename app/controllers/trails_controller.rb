@@ -15,6 +15,6 @@ class TrailsController < ApplicationController
 
 	private
 	def trail_params
-		params.require(:trail).permit(:name, :start_point, :end_point, :difficulty, :length_of_hike, :terrain, :notes)
+		params.require(:trail).permit(:name, :start_point, :end_point, :difficulty_rating, :length_of_hike, :terrain, :description, :notes)
 	end
 end
