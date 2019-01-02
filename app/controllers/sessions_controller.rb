@@ -5,12 +5,12 @@ class SessionsController < ApplicationController
 
 	def create
 		#validate username and login, authenticate, set session hash
-		binding.pry
+
 		#debug login and validation
-		@user = User.find_by(params[:user][:name])
+		@user = User.find_by(name: params[:user][:name])
 		if !@user || @user.nil?
 			return render :login
-		elsif @user && @user.autheticate(params[:user][:password])
+		elsif @user && @user.authenticate(params[:user][:password])
 			session[:id] = @user[:id]
 			return redirect_to '/trails/index'
 		else
