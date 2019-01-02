@@ -6,11 +6,9 @@ class SessionsController < ApplicationController
 	def create
 		user = request.env['omniauth.auth']
 		if user.provider == "facebook"
-			#binding.pry
 			@user = User.find_or_create_by(uid: auth['uid']) do |u|
 				u.name = auth['info']['name']
 				u.email = auth['info']['email']
-				u.image = auth['info']['name']
 			end
 				session[:user_id] = @user.id
 				redirect_to '/trails/index'
@@ -32,5 +30,10 @@ class SessionsController < ApplicationController
 	def destroy
 		session.delete [:name]
 		redirect_to '/login'
+	end
+
+	private
+	def auth
+		request.env['omniauth.auth']
 	end
 end
