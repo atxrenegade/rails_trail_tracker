@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   resources :hikes
   resources :trails
+  resources :users, only: [:show]
 
   get '/sign_up', to: 'users#new'
   post '/sign_up', to: 'users#create'
+
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
-  get '/auth/facebook/callback', to: 'sessions#create'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/auth/facebook/callback', to: 'sessions#create'
 end
