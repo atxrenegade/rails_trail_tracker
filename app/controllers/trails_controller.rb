@@ -3,7 +3,7 @@ class TrailsController < ApplicationController
 	def index
 		@trails = Trail.all
 	end
-		
+
 	def show
 		@trail = Trail.find_by(id: params[:id])
 		render :show
@@ -15,6 +15,17 @@ class TrailsController < ApplicationController
 
 	def create
 		@trail = Trail.create(trail_params)
+		redirect_to trail_path(@trail)
+	end
+
+	def edit
+		@trail = Trail.find_by(id: params[:id])
+		render :edit
+	end
+
+	def update
+		@trail = Trail.find_by(id: params[:id])
+		@trail.update(trail_params)
 		redirect_to trail_path(@trail)
 	end
 
