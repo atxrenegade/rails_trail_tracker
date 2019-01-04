@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 				u.email = auth['info']['email']
 			end
 				session[:user_id] = @user.id
-				redirect_to '/trails/index'
+				redirect_to '/trails'
 		else
 			@user = User.find_by(name: params[:user][:name])
 			if !@user || @user.nil?
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 				render :login
 			elsif @user && @user.authenticate(params[:user][:password])
 				session[:id] = @user[:id]
-				redirect_to '/trails/index'
+				redirect_to '/trails'
 			else
 				flash[:notice] = "Please enter the correct password"
 				render :login

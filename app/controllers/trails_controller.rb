@@ -6,7 +6,6 @@ class TrailsController < ApplicationController
 
 	def show
 		@trail = Trail.find_by(id: params[:id])
-		render :show
 	end
 
 	def new
