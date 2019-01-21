@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   	def show
 		@user = User.find_by(id: params[:id])
-	end	
+	end
 
 	def new
 		@user = User.new
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 		@user = User.create(user_params)
 		if @user.save
 			session[:id] = @user[:id]
-			redirect_to '/trails/index'
+			redirect_to '/trails'
 		else
 			render :sign_up
 		end
