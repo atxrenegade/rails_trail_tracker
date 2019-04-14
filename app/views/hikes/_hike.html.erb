@@ -1,7 +1,7 @@
 <%= form_for @hike do |f| %>
 	<%= f.label :date_of_hike %>
-	<%= f.text_field :date_of_hike %>
+	<%= f.text_field :date_of_hike %><br>
 	<%= f.label :comments %>
-	<%= f.text_field :comments %>
+	<%= f.text_area :comments %><br><br>
 	<%= f.submit "Save Hike" %>
 <% end %>
