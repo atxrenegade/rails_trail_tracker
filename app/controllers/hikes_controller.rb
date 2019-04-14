@@ -24,8 +24,8 @@ class HikesController < ApplicationController
 	end
 
 	private
-	def trails_params
-		params.require(:hike).permit(:date, :comments, :trail_id)
+	def hikes_params
+		params.require(:hike).permit(:date_of_hike, :comments)
 	end
 end
 
