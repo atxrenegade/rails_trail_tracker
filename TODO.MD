@@ -31,7 +31,7 @@
 				belongs_to :user
 				has_one :map_api through: :trails
 			MAP_API
-				belongs_to :trail
+				belongs_to :trail (JS/RAILS?)
 
 			  **********You must include at least one class level ActiveRecord scope method. ----which would be what exactly?
 
@@ -45,7 +45,7 @@
 					-users geolocation in relation to trail
 					-should I wait for JS/Rails to add maps and comments using js?
 					- google places api or geo encoding api?
-				- add images for trail/hike?	
+				- add images for trail/hike?
 
 2. create hikes belongs_to :user and :trail association in database
 3. create hikes association on new hike form that shows drop down menu for existing trails and saves new hike to the appropriate users
