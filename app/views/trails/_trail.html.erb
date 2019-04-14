@@ -1,19 +1,19 @@
 <%= form_for(@trail) do |f| %>
-	<%= f.label :name %> :
+	<%= f.label :name %>
 	<%= f.text_field :name %><br>
-	<%= f.label :start_point %> :
+	<%= f.label :start_point %>
 	<%= f.text_field :start_point %><br>
-	<%= f.label :end_point %> :
+	<%= f.label :end_point %>
 	<%= f.text_field :end_point %><br>
-	<%= f.label :difficulty_rating %> :
+	<%= f.label :difficulty_rating %>
 	<%= f.text_field :difficulty_rating %><br>
-	<%= f.label :length_of_hike %> :
+	<%= f.label :length_of_hike %>
 	<%= f.text_field :length_of_hike %><br>
-	<%= f.label :terrain %> :
+	<%= f.label :terrain %>
 	<%= f.text_field :terrain %><br>
-	<%= f.label :description %> :
+	<%= f.label :description %>
 	<%= f.text_field :description %><br>
-	<%= f.label :notes %> :
+	<%= f.label :notes %> 
 	<%= f.text_area :notes %><br>
 	<%= f.submit "Save Trail" %>
 <% end %>
