@@ -1,14 +1,14 @@
 class HikesController < ApplicationController
 	def index
-		@trails = Trail.all
+		@hikes = Hike.all
 	end
 
 	def show
-		@trail = Trail.find_by(id: params[:id])
+		@hike = Hike.find_by(id: params[:id])
 	end
 
 	def new
-		@trail = Trail.new
+		@hike = Hike.new
 	end
 
 	def create
@@ -17,7 +17,7 @@ class HikesController < ApplicationController
 	end
 
 	def edit
-		@trail = Trail.find_by(id: params[id])
+		@hike = Hike.find_by(id: params[id])
 	end
 
 	def update
