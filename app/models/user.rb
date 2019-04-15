@@ -15,5 +15,4 @@ class User < ApplicationRecord
 	validates :password,
 		presence: true,
 		confirmation: { message: "must match."}
-
 end
