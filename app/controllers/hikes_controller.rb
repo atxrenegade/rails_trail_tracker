@@ -12,7 +12,7 @@ class HikesController < ApplicationController
 	end
 
 	def create
-		@hike = Hike.create(hike_params)
+		@hike = Hike.create(hikes_params)
 		redirect_to @hike
 	end
 

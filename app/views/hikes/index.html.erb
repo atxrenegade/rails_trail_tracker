@@ -1,1 +1,9 @@
-<h1> Hikes' Index Page <h1>
+<% binding.pry %>
+<h1> Completed Hikes for <% @user.name %><h1>
+<ol>
+	<%= hike.all.each do |hike| %>
+		<% if hike.user_id == user.id %>
+			<li><%= hike.date_of_hike %> - <%= hike.comments %></li>
+		<% end %>
+	<% end %>
+</ol>
