@@ -1,4 +1,5 @@
 class TrailsController < ApplicationController
+	before_action :require_user, only: [:show, :new, :edit]
 
 	def index
 		@trails = Trail.all

@@ -1,4 +1,5 @@
 class HikesController < ApplicationController
+	before_action :require_user
 	def index
 		@hikes = Hike.all
 	end
