@@ -1,12 +1,13 @@
 class UsersController < ApplicationController
 	before_action :require_user, only: [:show]
+
   	def show
 		@user = User.find_by(id: params[:id])
 	end
 
 	def new
 		@user = User.new
-		render :sign_up
+		render :signup
 	end
 
 	def create
@@ -15,7 +16,7 @@ class UsersController < ApplicationController
 			session[:id] = @user[:id]
 			redirect_to '/trails'
 		else
-			render :sign_up
+			render :signup
 		end
 	end
 
