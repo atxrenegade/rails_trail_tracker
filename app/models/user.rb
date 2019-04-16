@@ -17,17 +17,17 @@ class User < ApplicationRecord
 		confirmation: { message: "must match."}
 
 		def self.create_with_omniauth(auth)
-			binding.pry
 		  user = find_or_create_by(uid: auth['uid'])
-		  user.email = auth['email']
-		  user.password = auth['uid']
-		  user.name = auth['info']['name']
 
-		  if User.exists?(user)
+		  if user.name != nil
 		    user
 		  else
+				user.email = auth["info"]['email']
+			  user.name = auth['info']['name']
+				user.password = auth['uid']
 		    user.save!
 		    user
 		  end
+			@user = user
 		end
 end
