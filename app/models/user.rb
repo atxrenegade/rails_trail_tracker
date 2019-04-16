@@ -15,4 +15,19 @@ class User < ApplicationRecord
 	validates :password,
 		presence: true,
 		confirmation: { message: "must match."}
+
+		def self.create_with_omniauth(auth)
+			binding.pry
+		  user = find_or_create_by(uid: auth['uid'])
+		  user.email = auth['email']
+		  user.password = auth['uid']
+		  user.name = auth['info']['name']
+
+		  if User.exists?(user)
+		    user
+		  else
+		    user.save!
+		    user
+		  end
+		end
 end

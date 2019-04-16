@@ -14,7 +14,7 @@
   </body>
 	<nav>
 		<% unless controller_name == "sessions" || controller_name == "users" %>
-			<br><br><%= link_to "Logout", logout_path %>
+			<br><br><%= link_to("Logout", logout_path )%>
 		<% end %>
 	</nav>
 </html>

@@ -6,6 +6,7 @@ ruby '2.3.3'
 
 gem "railties", ">= 5.2.2.1"
 gem "actionview", ">= 5.2.2.1"
+gem 'figaro'
 
 gem 'omniauth'
 gem 'omniauth-facebook'
