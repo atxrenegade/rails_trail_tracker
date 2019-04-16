@@ -36,3 +36,31 @@ def create
 			render :login
 		end
 	end
+
+#Sessionsview new
+<h2> Log In </h2>
+<% if flash[:notice] %>
+    <div class="notice" style="color:red;"><%= flash[:notice]%></div><br>
+<% end %>
+<%= form_tag({controller: 'sessions', action: 'create', method: 'post'}) do %>
+	<label>Username: </label>
+	<%= text_field_tag 'user[name]'%><br>
+	<label>Password: </label>
+	<%= text_field_tag 'user[password]'%><br><br>
+	<%= submit_tag 'Log In' %>
+<% end %><br>
+<%= link_to "Log In with Facebook", 'auth/facebook' %>
+
+
+<%= form_for @user, controller: 'users', action: 'create' do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+
+  <%= f.submit "create" %>
+<% end %>

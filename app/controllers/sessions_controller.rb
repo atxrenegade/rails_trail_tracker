@@ -4,12 +4,13 @@ class SessionsController < ApplicationController
 	end
 
 	def create
-		@user = User.find_by(name: params[:user][:name])
-		if !@user || @user.nil?
+		user = User.find_by(name: params[:user][:name])
+		if !user || user.nil?
 			flash[:notice] = "Please enter a valid username"
 			render :login
-		elsif @user && @user.authenticate(params[:user][:password])
-			session[:id] = @user[:id]
+		elsif user && user.authenticate(params[:user][:password])
+			session[:user_id] = user[:id]
+			@user = user #why is this line not setting my @user to be accessible throughout the program?
 			redirect_to '/trails'
 		else
 			flash[:notice] = "Please enter the correct password"
@@ -18,7 +19,7 @@ class SessionsController < ApplicationController
 	end
 
 	def destroy
-		session.delete [:name]
+		session.delete [:user_id]
 		redirect_to '/login'
 	end
 

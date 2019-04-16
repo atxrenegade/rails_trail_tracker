@@ -1,4 +1,4 @@
-<% binding.pry %>
+	<% binding.pry %>
 <h1> Completed Hikes for <% @user.name %><h1>
 <ol>
 	<%= hike.all.each do |hike| %>
@@ -6,4 +6,5 @@
 			<li><%= hike.date_of_hike %> - <%= hike.comments %></li>
 		<% end %>
 	<% end %>
+
 </ol>
