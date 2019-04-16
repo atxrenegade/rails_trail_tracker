@@ -3,9 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.3.3'
 
+gem 'bootstrap'
+gem 'jquery-rails'
 
 gem "railties", ">= 5.2.2.1"
 gem "actionview", ">= 5.2.2.1"
+
 gem 'figaro'
 
 gem 'omniauth'
