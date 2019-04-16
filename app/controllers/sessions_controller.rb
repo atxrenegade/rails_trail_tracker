@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 			render :login
 		elsif user && user.authenticate(params[:user][:password])
 			session[:user_id] = user[:id]
-			@user = user #why is this line not setting my @user to be accessible throughout the program?
+			@user = user
 			redirect_to '/trails'
 		else
 			flash[:notice] = "Please enter the correct password"
