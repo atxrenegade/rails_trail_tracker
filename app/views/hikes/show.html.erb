@@ -1,3 +1,10 @@
-<h1> Hike Show Page <h1>
 
+Date: <%= @hike.date_of_hike %><br>
+Trail: <%= @trail.trail.name %><br>
+Is Public?: <%= @trail.is_public %><br>
+<br><br>
+
+<%= link_to "Return to Trails Index", trails_path %>
+<%= link_to "View all of my Hikes", hikes_path %>
+<%= link_to "Record New Hike", new_hike_path %>
 <%= link_to "Add Images", new_images_path(@hike) %>
