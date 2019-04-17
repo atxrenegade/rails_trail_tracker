@@ -2,6 +2,7 @@ class User < ApplicationRecord
 	has_secure_password
 	has_many :hikes
 	has_many :trails, through: :hikes
+	has_many :pictures, as: :imageable
 
 	validates :name,
 		presence: { message: "cannot be blank"},
