@@ -5,7 +5,7 @@ class CreateHikes < ActiveRecord::Migration[5.2]
       t.belongs_to :trail, index: true
       t.string :date_of_hike
       t.text :comments
-			t.boolean :hike
+			t.boolean :is_public
       t.timestamps
     end
   end
