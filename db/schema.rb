@@ -10,16 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_02_042634) do
-
-  create_table "hikes", force: :cascade do |t|
-    t.string "date_of_hike"
-    t.text "comments"
-    t.integer "user_id"
-    t.integer "trail_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2018_11_15_044459) do
 
   create_table "trails", force: :cascade do |t|
     t.string "name"
@@ -32,15 +23,6 @@ ActiveRecord::Schema.define(version: 2019_01_02_042634) do
     t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "uid"
   end
 
 end
