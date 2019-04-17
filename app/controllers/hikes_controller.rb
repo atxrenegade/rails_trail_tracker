@@ -17,7 +17,6 @@ class HikesController < ApplicationController
 		#forbidden attributes error
 		user = current_user.id
 	  params["is_public"] == 1 ? is_public = true : is_public = false
-		binding.pry
 		hikes_params = {"date_of_hike": params["hike"]["date_of_hike"],
  		"trail_id": params["hike"]["trail_id"],
  		"comments": params["hike"]["comments"],

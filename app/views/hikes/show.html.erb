@@ -1,10 +1,9 @@
-
 Date: <%= @hike.date_of_hike %><br>
-Trail: <%= @trail.trail.name %><br>
-Is Public?: <%= @trail.is_public %><br>
+Trail: <%= @hike.trail.name %><br>
+Public? <%= @hike.is_public %><br>
+Comments: <%= @hike.comments %><br>
 <br><br>
 
-<%= link_to "Return to Trails Index", trails_path %>
-<%= link_to "View all of my Hikes", hikes_path %>
-<%= link_to "Record New Hike", new_hike_path %>
-<%= link_to "Add Images", new_images_path(@hike) %>
+<%= link_to "Return to Trails Index", trails_path %><br>
+<%= link_to "View all of my Hikes", hikes_path %><br>
+<%= link_to "Record New Hike", new_hike_path %><br>
