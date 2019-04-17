@@ -10,7 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_15_044459) do
+ActiveRecord::Schema.define(version: 2019_04_17_155917) do
+
+  create_table "hikes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "trail_id"
+    t.string "date_of_hike"
+    t.text "comments"
+    t.boolean "is_public"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["trail_id"], name: "index_hikes_on_trail_id"
+    t.index ["user_id"], name: "index_hikes_on_user_id"
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string "date"
+    t.string "description"
+    t.boolean "is_public"
+    t.string "imageable_type"
+    t.integer "imageable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
+  end
 
   create_table "trails", force: :cascade do |t|
     t.string "name"
@@ -23,6 +46,15 @@ ActiveRecord::Schema.define(version: 2018_11_15_044459) do
     t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "uid"
   end
 
 end
