@@ -1,7 +1,15 @@
 <%= form_for @hike do |f| %>
-	<%= f.label :date_of_hike %>
-	<%= f.text_field :date_of_hike %><br>
-	<%= f.label :comments %>
-	<%= f.text_area :comments %><br><br>
+	Date <%= f.text_field :date_of_hike %><br>
+	Select Trail <%= f.label "Select Trail", :trail_id %><br>
+	Comments <%= f.text_area :comments %><br>
+	Would you like to make this hike public? <%= f.check_box :is_public %><br><br>
 	<%= f.submit "Save Hike" %>
 <% end %>
+
+/* date format
+ date validation
+ drop down menu to select trail
+ check box for public
+ add images link to new images form
+ placeholder vaules for edit form
+*/
