@@ -1,3 +1,7 @@
+Display all hikes related to a specific user this is a nested route
+User is the parent of hike /user/2/hikes
+user/2/hikes
+
 	<% binding.pry %>
 <h1> Completed Hikes for <% @user.name %><h1>
 <ol>
@@ -8,3 +12,7 @@
 	<% end %>
 
 </ol>
+
+<%= link_to "Add New Hike", new_trail_path %><br>
+<%= link_to "Return to Trails Index", trails_path %><br>
+<%= link_to "Add New Trail", new_hike_path %><br>
