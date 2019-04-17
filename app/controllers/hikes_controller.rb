@@ -14,7 +14,7 @@ class HikesController < ApplicationController
 
 	def create
 		@hike = Hike.create(hikes_params)
-		redirect_to @hike
+		redirect_to hike_path(@hike)
 	end
 
 	def edit
@@ -26,7 +26,7 @@ class HikesController < ApplicationController
 
 	private
 	def hikes_params
-		params.require(:hike).permit(:date_of_hike, :comments)
+		params.require(:hike).permit(:date_of_hike, :comments, :is_public, :trail_id, :user_id)
 	end
 end
 

@@ -1,6 +1,11 @@
 <%= form_for @hike do |f| %>
 	Date <%= f.text_field :date_of_hike %><br>
-	Select Trail <%= f.label "Select Trail", :trail_id %><br>
+	Select Trail
+	<select name="hike[trail_id]">
+    <% Trail.all.each do |trail| %>
+        <option value="<%= trail.id %>"><%= trail.name %></option>
+    <% end %>
+	</select><br>
 	Comments <%= f.text_area :comments %><br>
 	Would you like to make this hike public? <%= f.check_box :is_public %><br><br>
 	<%= f.submit "Save Hike" %>
@@ -11,5 +16,5 @@
  drop down menu to select trail
  check box for public
  add images link to new images form
- placeholder vaules for edit form
+ placeholder values for edit form
 */
