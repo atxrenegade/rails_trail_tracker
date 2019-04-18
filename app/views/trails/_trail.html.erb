@@ -1,19 +1,44 @@
 <%= form_for(@trail) do |f| %>
-		<%= f.label :name %>
-		<%= f.text_field :name %><br>
-		<%= f.label :start_point %>
-		<%= f.text_field :start_point %><br>
-		<%= f.label :end_point %>
-		<%= f.text_field :end_point %><br>
-		<%= f.label :difficulty_rating %>
-		<%= f.text_field :difficulty_rating %><br>
-		<%= f.label :length_of_hike %>
-		<%= f.text_field :length_of_hike %><br>
-		<%= f.label :terrain %>
-		<%= f.text_field :terrain %><br>
-		<%= f.label :description %>
-		<%= f.text_field :description %><br>
-		<%= f.label :notes %>
-		<%= f.text_area :notes %><br>
-		<%= f.submit "Save Trail" %>
+
+	<div class="form-group row">
+		<%= f.label :name, class:"col-sm-8 col-form-label" %>
+		<%= f.text_field :name, class:"form-control" %>
+	</div>
+
+	<div class="form-group row">
+		<%= f.label :start_point, class:"col-sm-8 col-form-label" %>
+		<%= f.text_field :start_point, class:"form-control" %>
+	</div>
+
+	<div class="form-group row">
+		<%= f.label :end_point, class:"col-sm-8 col-form-label" %>
+		<%= f.text_field :end_point, class:"form-control" %>
+	</div>
+
+	<div class="form-group row">
+		<%= f.label :difficulty_rating, class:"col-sm-8 col-form-label" %>
+		<%= f.text_field :difficulty_rating, class:"form-control" %>
+	</div>
+
+	<div class="form-group row">
+		<%= f.label :length_of_hike, class:"col-sm-8 col-form-label" %>
+		<%= f.text_field :length_of_hike, class:"form-control" %>
+	</div>
+
+	<div class="form-group row">
+		<%= f.label :terrain, class:"col-sm-8 col-form-label" %>
+		<%= f.text_field :terrain, class:"form-control" %>
+	</div>
+
+	<div class="form-group row">
+		<%= f.label :description, class:"col-sm-8 col-form-label" %>
+		<%= f.text_field :description, class:"form-control" %>
+	</div>
+
+	<div class="form-group row">
+		<%= f.label :notes, class:"col-sm-8 col-form-label" %>
+		<%= f.text_area :notes, class:"form-control" %>
+	</div><br><br>
+
+		<%= f.submit "Save Trail", class:"btn btn-primary" %><br><br>
 	<% end %>
