@@ -1,6 +1,8 @@
-<h1><%= @user.name %> - Profile Page </h1>
+<h1><%= current_user.name %> - Profile Page </h1>
+Email: <%= current_user.email %><br><br>
 
 
-
-
-<%= link_to "Add Images", new_images_path(@hike) %>
+<%= link_to "Return to Trails Index", trails_path %><br>
+<%= link_to "Add New Trail", new_trail_path %><br>
+<%= link_to "View All of My Hikes", hikes_path %><br>
+<%= link_to "Record New Hike", new_hike_path %><br>
