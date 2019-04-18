@@ -1,16 +1,12 @@
-Display all hikes related to a specific user this is a nested route
-User is the parent of hike /user/2/hikes
-user/2/hikes
-
-	<% binding.pry %>
-<h1> Completed Hikes for <% @user.name %><h1>
+<h1> Completed Hikes for <%= current_user.name %></h1>
 <ol>
-	<%= hike.all.each do |hike| %>
-		<% if hike.user_id == user.id %>
-			<li><%= hike.date_of_hike %> - <%= hike.comments %></li>
+	<% Hike.all.each do |hike| %>
+		<% if hike.user_id == current_user.id %>
+			<li><%= link_to(hike) do %>
+				<%= hike.date_of_hike %> -  <%= hike.trail.name%></li>
+			<% end %>
 		<% end %>
 	<% end %>
-
 </ol>
 
 <%= link_to "Record New Hike", new_trail_path %><br>
