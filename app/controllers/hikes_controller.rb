@@ -13,27 +13,29 @@ class HikesController < ApplicationController
 	end
 
 	def create
-		#create boolean value, create trail_id, create_user id, pass all into hikes params
-		#forbidden attributes error
 		user = current_user.id
 	  params["is_public"] == 1 ? is_public = true : is_public = false
-		hikes_params = {"date_of_hike": params["hike"]["date_of_hike"],
+		hike_params = {"date_of_hike": params["hike"]["date_of_hike"],
  		"trail_id": params["hike"]["trail_id"],
  		"comments": params["hike"]["comments"],
  		"is_public": is_public, "user_id": user}
-		@hike = Hike.create(hikes_params)
+		@hike = Hike.create(hike_params)
 		redirect_to hike_path(@hike)
 	end
 
 	def edit
-		@hike = Hike.find_by(id: params[id])
+		@hike = Hike.find_by(id: params[:id])
+		render :edit
 	end
 
 	def update
+		@hike = Hike.find_by(id: params[:id])
+		@hike.update(hike_params)
+		redirect_to hike_path(@hike)
 	end
 
 	private
-	def hikes_params
+	def hike_params
 		params.require(:hike).permit(:date_of_hike, :comments, :is_public, :trail_id, :user_id)
 	end
 end
