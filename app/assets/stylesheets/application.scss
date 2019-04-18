@@ -11,3 +11,7 @@ body {
 div#error_explanation {
 	color: red;
 }
+
+select, .form-control {
+	background: rgba(255, 255, 255, .8);
+}
