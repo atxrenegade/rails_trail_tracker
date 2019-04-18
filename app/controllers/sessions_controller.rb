@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
 				render :login
 			elsif @user && @user.authenticate(params[:user][:password])
 				session[:user_id] = @user[:id]
-				redirect_to '/trails'
+				redirect_to '/welcome'
 			else
 				flash[:notice] = "Please enter the correct password"
 				render :login
@@ -24,7 +24,6 @@ class SessionsController < ApplicationController
 	end
 
 	def welcome
-		#render :welcome
 	end
 
 	def destroy
