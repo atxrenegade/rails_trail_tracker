@@ -1,5 +1,5 @@
 <%= form_for @hike do |f| %>
-	Date <%= f.text_field :date_of_hike %><br>
+	Date (format: mm/dd/yy) <%= f.text_field :date_of_hike %><br>
 	Select Trail
 	<select name="hike[trail_id]">
     <% Trail.all.each do |trail| %>
