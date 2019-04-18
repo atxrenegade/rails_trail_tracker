@@ -37,7 +37,7 @@
 	          <a class="nav-link" href='/users/:id'>My Profile</a>
 	        </li>
 					<li class="nav-item">
-	          <a class="nav-link" href="#">Log Out</a>
+	          <a class="nav-link" href="/logout">Log Out</a>
 	        </li>
 	      </ul>
 	    </div>
@@ -48,8 +48,8 @@
 	<div class="container" >
 	  <div class="card border-0 shadow my-5 "style="background-color: rgba(245, 245, 245, 0.4)" >
 	    <div class="card-body p-5">
+				<div style="height: auto;"></div>
 	          <%= yield %>
-	      <div style="height: auto"></div>
 	    </div>
 	  </div>
 	</div>

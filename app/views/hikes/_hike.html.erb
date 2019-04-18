@@ -7,16 +7,36 @@
 			<% end %>
 		</ul>
 	</div>
-	<% end %>
-	<div class="field_with_errors">
-		Date (format: mm/dd/yy) <%= f.text_field :date_of_hike %><br>
+	<% end %><br>
+
+	<div class="form-group row">
+		<%= f.label :date_of_hike, "Date (format: mm/dd/yy)", class:"col-sm-8 col-form-label" %>
+		<div class="col-sm-10">
+			<%= f.text_field :date_of_hike, class:"form-control" %>
+		</div>
 	</div>
-	Select Trail <select name="hike[trail_id]">
-    <% Trail.all.each do |trail| %>
-        <option value="<%= trail.id %>"><%= trail.name %></option>
-    <% end %>
-	</select><br>
-	Comments <%= f.text_area :comments %><br>
-	Public? (Allow other users to see this hike) <%= f.check_box :is_public %><br><br>
-	<%= f.submit "Save Hike" %>
+
+	<div class="form-group row">
+		<%= f.label :trail_id, "Select Trail", class:"col-sm-5 col-form-label" %> <br>
+		<div class="col-sm-10">
+			<select name="hike[trail_id]" class:"form_select">
+		    <% Trail.all.each do |trail| %>
+		        <option value="<%= trail.id %>"><%= trail.name %></option>
+		    <% end %>
+			</select><br>
+		</div>
+	</div>
+	<div class="form-group row">
+		<%= f.label :comments, "Comments", class:"col-sm-5 col-form-label" %>
+		<div class="col-sm-10">
+			<%= f.text_area :comments, class:"form-control"%>
+		</div>
+	</div>
+	<div class="form-group row">
+		<div class="col-sm-8">Allow other users to see this hike?</div>
+		<div class="col-sm-10">
+			<%= f.check_box :is_public, class:"form-checkbox" %>
+		</div><br><br>
+	</div>
+	<%= f.submit "Save Hike", class:"btn btn-primary"%><br><br>
 <% end %>
