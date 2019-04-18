@@ -20,7 +20,11 @@ class HikesController < ApplicationController
  		"comments": params["hike"]["comments"],
  		"is_public": is_public, "user_id": user}
 		@hike = Hike.create(hike_params)
-		redirect_to hike_path(@hike)
+		if @hike.save
+			redirect_to hike_path(@hike)
+		else
+			render :new
+		end
 	end
 
 	def edit
@@ -31,7 +35,11 @@ class HikesController < ApplicationController
 	def update
 		@hike = Hike.find_by(id: params[:id])
 		@hike.update(hike_params)
-		redirect_to hike_path(@hike)
+		if @hike.save
+			redirect_to hike_path(@hike)
+		else
+			render :edit
+		end
 	end
 
 	private

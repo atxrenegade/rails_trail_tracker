@@ -4,6 +4,6 @@ class Hike < ApplicationRecord
 	has_many :pictures, as: :imageable
 
 	validates :date_of_hike,
-		format: { with: /\d{2}\/\d{2}\/\d{2}/, message: "Please Enter Valid Date Format" }
-		
+		format: { with: /\d{2}\/\d{2}\/\d{2}/, message: " - Please Enter Valid Date Format" },
+		presence: true
 end

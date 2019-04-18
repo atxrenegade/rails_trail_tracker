@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 		@user = User.create(user_params)
 		if @user.save
 			session[:id] = @user[:id]
-			redirect_to '/trails'
+			redirect_to '/welcome'
 		else
 			render :signup
 		end
