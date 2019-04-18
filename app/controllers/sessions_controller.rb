@@ -23,6 +23,10 @@ class SessionsController < ApplicationController
 		end
 	end
 
+	def welcome
+		#render :welcome
+	end
+
 	def destroy
 		session[:user_id] = nil
 		redirect_to '/login'
