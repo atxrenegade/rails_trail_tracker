@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
-  resources :hikes
-  resources :trails
-  resources :users, only: [:show]
+  resources :hikes do
+  	resources :images
+  end
+
+  resources :trails do
+		resources :images
+  end
+
+  resources :users, only: [:show] do
+		resources :images
+  end
+  
 
 	get '/', to:'sessions#new'
 	get '/welcome', to: 'sessions#welcome'
