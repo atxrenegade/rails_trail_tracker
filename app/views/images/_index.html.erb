@@ -1,12 +1,13 @@
 <h1>Gallery</h1>
 <div id="gallery">
-	<%= @images.each do |image| %>
+	<% binding.pry %>
+	<% @images.each do |image| %>
 	<div class="image">
 		<%= image.url %><br>
 		<%= image.date %><br>
 		<%= image.trail_name %><br>
 		<%= image.username %><br>
-		<%= link_to "More...", image_path(image) %><br>
+
 	</div>
 	<% end %>
 	<%= link_to "Add Image", [:new, @imageable, :image] %>

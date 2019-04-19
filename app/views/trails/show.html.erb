@@ -8,7 +8,7 @@ Description:  <%= @trail.description %><br>
 Notes: <%= @trail.notes %><br>
 <br><br>
 
-
+<%= link_to "Add Image", [:new, @imageable, :image] %><br><br>
 
 <%= link_to "Return to Trails Index", trails_path %><br>
 <%= link_to "Add New Trail", new_trail_path %><br>

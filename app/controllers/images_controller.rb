@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
-	before_filter :load_imageable
+	before_action :load_imageable
 
   def index
 		@images = @imageable.images
@@ -34,5 +34,5 @@ class ImagesController < ApplicationController
 	def load_imageable
 		resource, id = request.path.split('/')[1,2]
 		@imageable = resource.singularize.classify.constantize.find(id)
-	end	
+	end
 end

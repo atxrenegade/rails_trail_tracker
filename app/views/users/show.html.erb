@@ -1,5 +1,6 @@
 <h1><%= current_user.name %> - Profile Page </h1>
 Email: <%= current_user.email %><br><br>
+<%= link_to "Add Image", [:new, @imageable, :image] %><br><br>
 
 <%= render '/images/index' %>
 
