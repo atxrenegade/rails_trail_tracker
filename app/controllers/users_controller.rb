@@ -3,6 +3,9 @@ class UsersController < ApplicationController
 
   	def show
 		@user = User.find_by(id: params[:id])
+		@imageable = @user
+		@images = @imageable.images
+		@image = Image.new
 	end
 
 	def new

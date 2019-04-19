@@ -7,6 +7,9 @@ class TrailsController < ApplicationController
 
 	def show
 		@trail = Trail.find_by(id: params[:id])
+		@imageable = @trail
+		@images = @imageable.images
+		@image = Image.new
 	end
 
 	def new

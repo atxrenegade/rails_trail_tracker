@@ -6,6 +6,9 @@ class HikesController < ApplicationController
 
 	def show
 		@hike = Hike.find_by(id: params[:id])
+		@imageable = @hike
+		@images = @imageable.images
+		@image = Image.new
 	end
 
 	def new
