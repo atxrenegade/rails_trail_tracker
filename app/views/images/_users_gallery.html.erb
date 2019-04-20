@@ -1,5 +1,20 @@
-<%= link_to "Add Image", [:new, @imageable, :image] %>
+
 <br><br>
 <h1> My Gallery </h1><br>
-<% @images = Image.all %>
-<%= render 'gallery' %>
+helper method below
+<% @images = Image.all.where(username: current_user.name) %>
+
+<div class="gallery">
+	<% if @images.nil? %>
+		<p> No Images to Display </p>
+	<% else %>
+		<% @images.each do |image| %>
+			<div class="image">
+				<%= image.url %><br>
+				<%= image.date %><br>
+				<%= image.trail_name %><br>
+				<%= image.username %><br>
+			</div><br><br>
+		<% end %>
+	<% end %>
+</div>
