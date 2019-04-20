@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  get 'images/index'
-  get 'images/new'
-  get 'images/create'
-  get 'images/show'
-  get 'images/edit'
-  get 'images/delete'
   resources :hikes do
   	resources :images
   end
