@@ -1,9 +1,9 @@
 <%= form_for(@trail) do |f| %>
-	<% if @image.errors.any? %>
+	<% if @trail.errors.any? %>
 		<div id="error_explanation">
 			<h4>Please correct the following errors:</h4>
 			<ul>
-				<% @image.errors.full_messages.each do |message| %>
+				<% @trail.errors.full_messages.each do |message| %>
 				<li><%= message %></li>
 				<% end %>
 			</ul>

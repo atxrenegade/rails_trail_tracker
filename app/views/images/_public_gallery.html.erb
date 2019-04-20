@@ -1,11 +1,3 @@
 <h1>Public Gallery</h1><br>
-<div id="public-gallery">
-	<% Image.all.each do |image| %>
-	<div class="image">
-		<%= image.url %><br>
-		<%= image.date %><br>
-		<%= image.trail_name %><br>
-		<%= image.username %><br>
-	</div><br><br>
-	<% end %>
-</div>
+<% @images = Image.all %>
+<%= render 'gallery' %>
