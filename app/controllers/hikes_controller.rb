@@ -18,6 +18,7 @@ class HikesController < ApplicationController
 	def create
 		user = current_user.id
 	  params["is_public"] == 1 ? is_public = true : is_public = false
+		#can this be simplified using an exisitng helper or method?
 
 		hike_params = {"date_of_hike": params["hike"]["date_of_hike"],
  		"trail_id": params["hike"]["trail_id"],
@@ -52,7 +53,3 @@ class HikesController < ApplicationController
 		params.require(:hike).permit(:date_of_hike, :comments, :is_public, :trail_id, :user_id)
 	end
 end
-
-#create nested resource routes for hikes under user show page
-#implement join table for hikes user_id and hikes trail_id
-#add drop down menu for trail id

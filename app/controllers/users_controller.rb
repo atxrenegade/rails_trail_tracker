@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
 	before_action :require_user, only: [:show]
 
-  	def show
+  def show
 		@user = User.find_by(id: params[:id])
 		@imageable = @user
 		@images = @imageable.images
 		@image = Image.new
-	end
+  end
 
 	def new
 		@user = User.new
