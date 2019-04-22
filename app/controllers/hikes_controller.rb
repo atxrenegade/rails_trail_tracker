@@ -1,5 +1,6 @@
 class HikesController < ApplicationController
 	before_action :require_user
+	
 	def index
 		@hikes = Hike.all
 	end
@@ -49,9 +50,9 @@ class HikesController < ApplicationController
 	end
 
 	def destroy
-		@hike = Trail.find_by(id: params[:id])
+		@hike = Hike.find_by(id: params[:id])
 		@hike.destroy
-		redirect_to hike_path
+		redirect_to hikes_path
 	end
 
 	private
