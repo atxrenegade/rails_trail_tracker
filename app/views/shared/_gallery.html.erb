@@ -4,7 +4,7 @@
 	<% else %>
 		<% @images.each do |image| %>
 			<div class="image">
-				<%= image.url %><br>
+				<img src="<%= image.url %>"><br>
 				<%= image.date %><br>
 				<%= image.trail_name %><br>
 				<%= image.username %><br>
