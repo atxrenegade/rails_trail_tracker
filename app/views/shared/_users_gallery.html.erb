@@ -1,6 +1,5 @@
 <div class="container">
-  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">My Gallery</h1><br><br>
-	helper method below
+  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">My Gallery</h1><br>
 	<% @images = Image.all.where(username: current_user.name) %>
 	<%= render 'shared/gallery' %>
 </div>
