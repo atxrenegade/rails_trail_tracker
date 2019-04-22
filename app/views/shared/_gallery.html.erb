@@ -2,18 +2,18 @@
 	<p> No Images to Display </p>
 <% else %>
 	<% @images.each do |image| %>
-		<hr class="mt-2 mb-5">
+		<hr class="mt-2 mb-2">
 	  <div class="row text-center text-lg-left">
 	    <div class="col-lg-3 col-md-4 col-6">
-	      <a href="#" class="d-block mb-4 h-100">
+	      <div class="d-block mb-4 h-100">
 	            <img class="img-fluid img-thumbnail" src="<%= image.url %>" alt="">
-	      </a>
+				</div>
 			</div>
-			<%= image.date %><br>
-			<%= image.trail_name %><br>
-			<%= image.username %><br>
-			<br>
+				<%= image.date %><br>
+				<%= image.trail_name %><br>
+				<%= image.username %><br>
+				<%= image.description %><br>
+				<br><br>
 		</div>
 	<% end %>
 <% end %>
-</div>

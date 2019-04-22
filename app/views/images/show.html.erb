@@ -2,7 +2,7 @@
 	<img src="<%= image.url %>"><br>
 	<%= @image.date %><br>
 	<%= @image.trail_name %><br>
-	<%= @image.username %><br>
-</div>
+	<%= @image.username %><br><br>
 
-<%= link_to "Add Image", [:new, @imageable, :image] %>
+	<%= link_to "Add Image", [:new, @imageable, :image] %>
+</div>

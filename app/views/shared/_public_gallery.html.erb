@@ -1,6 +1,5 @@
 <div class="container">
   <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Public Gallery</h1><br>
-	<div class="card-body p5"
 	<% @images = Image.all.where(is_public: true) %>
 	<%= render 'shared/gallery' %>
 	</div>
