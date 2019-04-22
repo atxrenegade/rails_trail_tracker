@@ -3,8 +3,8 @@
 		<div id="error_explanation">
 			<h4>Please correct the following errors:</h4>
 			<ul>
-				<% @trail.errors.full_messages.each do |message| %>
-				<li><%= message %></li>
+				<% @trail.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
 				<% end %>
 			</ul>
 		</div>
@@ -12,8 +12,8 @@
 	<br>
 
 	<div class="form-group row field_with_errors">
-		<%= f.label :name, class:"col-sm-8 col-form-label" %>
-		<div class="col-sm-10">
+		<%= f.label :name, class:"col-sm-10 col-form-label" %>
+		<div class="col-sm-8">
 			<%= f.text_field :name, class:"form-control" %>
 		</div>
 	</div>
