@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
-	before_action :load_imageable
+	before_action :load_imageable, :except => [:gallery]
 
   def index
 		@images = @imageable.images
@@ -41,6 +41,10 @@ class ImagesController < ApplicationController
 
   def delete
   end
+
+	def gallery
+		render 'shared/_all_images'
+	end
 
 	private
 	def load_imageable
