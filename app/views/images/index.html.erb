@@ -1,3 +1,5 @@
-<%-# show all images for route type and id ex. trails/1/images -%>
-<% binding.pry %>
-<%= @image.imageable_type %>
+<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Hike Images</h1>
+<% if flash[:notice] %>
+  <div class="notice" style="color:red;"><%= flash[:notice]%></div>
+<% end %>
+<%= render 'shared/gallery' %>
