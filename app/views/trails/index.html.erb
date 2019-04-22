@@ -1,10 +1,12 @@
-<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Trails Index Page </h1>
-<% @trails.each do |trail| %>
-	<%= link_to trail.name, trail_path(trail) %><br>
-<% end %><br><br>
+<div class="container">
+	<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Trails Index Page </h1>
+	<% @trails.each do |trail| %>
+		<%= link_to trail.name, trail_path(trail) %><br>
+	<% end %><br><br>
 
-<%= link_to "Create New Trail", new_trail_path %><br>
-<%= link_to "View All of My Hikes", hikes_path %><br>
-<%= link_to "Record New Hike", new_hike_path %><br>
+	<%= link_to "Create New Trail", new_trail_path %><br>
+	<%= link_to "View All of My Hikes", hikes_path %><br>
+	<%= link_to "Record New Hike", new_hike_path %><br>
 
-<%= render 'shared/all_images' %>
+	<%= render 'shared/all_images' %>
+</div>

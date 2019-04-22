@@ -1,13 +1,15 @@
-<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Hike Details</h1>
-Date: <%= @hike.date_of_hike %><br>
-Trail: <%= @hike.trail.name %><br>
-Public? <%= @hike.is_public %><br>
-Comments: <%= @hike.comments %><br>
-<br><br>
+<div class="container">
+	<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Hike Details</h1>
+	Date: <%= @hike.date_of_hike %><br>
+	Trail: <%= @hike.trail.name %><br>
+	Public? <%= @hike.is_public %><br>
+	Comments: <%= @hike.comments %><br>
+	<br><br>
 
-<%= link_to "Add Image", [:new, @imageable, :image] %><br>
-<%= link_to "View All of My Hikes", hikes_path %><br>
-<%= link_to "Record New Hike", new_hike_path %><br>
-<%= link_to "Edit This Hike", edit_hike_path(@hike) %><br>
-<%= link_to "Return to Trails Index", trails_path %><br>
-<%= link_to "Add New Trail", new_trail_path %><br>
+	<%= link_to "Add Image", [:new, @imageable, :image] %><br>
+	<%= link_to "View All of My Hikes", hikes_path %><br>
+	<%= link_to "Record New Hike", new_hike_path %><br>
+	<%= link_to "Edit This Hike", edit_hike_path(@hike) %><br>
+	<%= link_to "Return to Trails Index", trails_path %><br>
+	<%= link_to "Add New Trail", new_trail_path %><br>
+</div>
