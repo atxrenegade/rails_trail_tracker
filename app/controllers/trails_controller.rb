@@ -36,6 +36,12 @@ class TrailsController < ApplicationController
 		redirect_to trail_path(@trail)
 	end
 
+	def destroy
+		@trail = Trail.find_by(id: params[:id])
+		@trail.destroy
+		redirect_to trails_path
+	end
+
 	private
 	def trail_params
 		params.require(:trail).permit(:name, :start_point, :end_point, :difficulty_rating, :length_of_hike, :terrain, :description, :notes)

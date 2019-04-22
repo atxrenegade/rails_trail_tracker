@@ -5,7 +5,7 @@
 	Public? <%= @hike.is_public %><br>
 	Comments: <%= @hike.comments %><br>
 	<br><br>
-
+	<%= link_to "DELETE this Hike", hike_path(@hike), data: {confirm: "Are you sure you want to DELETE this item?", method: "delete" } %><br>
 	<%= link_to "Add Image", [:new, @imageable, :image] %><br>
 	<%= link_to "View All of My Hikes", hikes_path %><br>
 	<%= link_to "Record New Hike", new_hike_path %><br>
