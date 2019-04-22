@@ -1,4 +1,5 @@
-<h1>Public Gallery</h1><br>
-helper method below
-<% @images = Image.all.where(is_public: true) %>
-<%= render 'shared/gallery' %>
+<div class="container">
+  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Public Gallery</h1><br><br>
+	<% @images = Image.all.where(is_public: true) %>
+	<%= render 'shared/gallery' %>
+</div>	
