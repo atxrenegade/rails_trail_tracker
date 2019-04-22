@@ -1,18 +1,4 @@
 <h1>Public Gallery</h1><br>
 helper method below
 <% @images = Image.all.where(is_public: true) %>
-
-<div class="gallery">
-	<% if @images.nil? %>
-		<p> No Images to Display </p>
-	<% else %>
-		<% @images.each do |image| %>
-			<div class="image">
-				<%= image.url %><br>
-				<%= image.date %><br>
-				<%= image.trail_name %><br>
-				<%= image.username %><br>
-			</div><br><br>
-		<% end %>
-	<% end %>
-</div>
+<%= render 'shared/gallery' %>
