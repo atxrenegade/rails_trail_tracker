@@ -48,6 +48,12 @@ class HikesController < ApplicationController
 		end
 	end
 
+	def destroy
+		@hike = Trail.find_by(id: params[:id])
+		@hike.destroy
+		redirect_to hike_path
+	end
+
 	private
 	def hike_params
 		params.require(:hike).permit(:date_of_hike, :comments, :is_public, :trail_id, :user_id)

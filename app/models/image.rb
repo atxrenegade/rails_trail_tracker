@@ -12,5 +12,4 @@ class Image < ApplicationRecord
 	validates :url,
 		presence: true,
 		format: { with: // , message: " - Please Enter a Valid Web Address" }
-
 end
