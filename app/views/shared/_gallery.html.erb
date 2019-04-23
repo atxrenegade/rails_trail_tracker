@@ -1,7 +1,11 @@
 <% if @images.nil? %>
 	<p> No Images to Display </p>
 <% else %>
+	<% counter = 1 %>
 	<% @images.each do |image| %>
+		<% if counter == 1 %>
+			<div class="row">
+		<% end %>
 		<div class="col-md-4">
 			 <div class="card mb-4 text-white bg-dark border-0">
 					<img class="card-img-top" src="<%= image.url %>" alt="Card image cap">
@@ -11,10 +15,15 @@
 							 <%= image.trail_name %><br>
 							<%= image.username %><br>
 							<%= image.description %><br>
-							<br></p>
+						</p>
 						 <a href="" class="btn btn-outline-light btn-sm">Image Show Page</a>
 					</div>
 				</div>
 		</div>
+		<% if counter == 3 %>
+			<% counter = 0 %>
+			</div>
+		<% end %>
+		<% counter += 1 %>
 	<% end %>
 <% end %>

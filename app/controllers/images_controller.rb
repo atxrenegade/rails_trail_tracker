@@ -7,7 +7,7 @@ class ImagesController < ApplicationController
 
 	def show
 		@image = @imageable.images.find_by_id(params[:id])
-  end
+	end
 
   def new
 		@image = @imageable.images.new(params[:images])
