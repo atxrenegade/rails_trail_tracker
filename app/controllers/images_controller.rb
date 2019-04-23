@@ -41,16 +41,17 @@ class ImagesController < ApplicationController
 
 	def update
 		@image = @imageable.images.find_by_id(params[:id])
-
 		@image.update(image_params)
-		render :index
+		#test_#{commentable.class.to_s.downcase}_comment_path
+		#redirect_to image_path(@image)
 	end
 
   def delete
-		index = params[:id].to_i - 1
-		@image = @imageable.images[index]
+		@image = @imageable.images.find_by_id(params[:id])
 		@image.destroy
-		redirect_to images_path
+		test_#{commentable.class.to_s.downcase}_comment_path
+		#redirect_to [@imageable,:images], notice: "Image Deleted!"
+		#render :index #help what do I redirect to?
   end
 
 	def gallery
