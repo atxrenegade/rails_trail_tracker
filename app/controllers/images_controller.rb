@@ -5,6 +5,10 @@ class ImagesController < ApplicationController
 		@images = @imageable.images
   end
 
+	def show
+		@image = @imageable.images.find_by_id(params[:id])
+  end
+
   def new
 		@image = @imageable.images.new(params[:images])
   end
@@ -30,16 +34,23 @@ class ImagesController < ApplicationController
 		end
   end
 
-  def show
-  end
-
   def edit
+		@image = @imageable.images.find_by_id(params[:id])
+		render :edit
   end
 
 	def update
+		@image = @imageable.images.find_by_id(params[:id])
+
+		@image.update(image_params)
+		render :index
 	end
 
   def delete
+		index = params[:id].to_i - 1
+		@image = @imageable.images[index]
+		@image.destroy
+		redirect_to images_path
   end
 
 	def gallery
@@ -53,6 +64,6 @@ class ImagesController < ApplicationController
 	end
 
 	def image_params
-		params.require(:user).permit(:url, :date, :is_public, :trail_name, :username, :description, :imageable_type, :imageable_id)
+		params.require(:image).permit(:url, :date, :is_public, :trail_name, :username, :description, :imageable_type, :imageable_id)
 	end
 end
