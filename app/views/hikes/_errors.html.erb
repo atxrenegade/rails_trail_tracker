@@ -1,8 +1,8 @@
-<% if @imageable.errors.any? %>
+<% if @hike.errors.any? %>
 	<div id="error_explanation">
 		<h4>Please correct the following errors:</h4>
 		<ul>
-			<% @imageable.errors.full_messages.each do |msg| %>
+			<% @hike.errors.full_messages.each do |msg| %>
 			<li><%= msg %></li>
 			<% end %>
 		</ul>
