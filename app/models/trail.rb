@@ -11,6 +11,6 @@ class Trail < ApplicationRecord
 
 	validates :difficulty_rating,
 		presence: true,
-		format: { with: /\d[1-5]{1}/, message: " - Please Enter a Valid Number" }
+		format: { with: /[1-5]{1}/, message: " - Please Enter a Valid Number" }
 
 end

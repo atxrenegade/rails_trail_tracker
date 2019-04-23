@@ -11,5 +11,5 @@ class Image < ApplicationRecord
 
 	validates :url,
 		presence: true,
-		format: { with: // , message: " - Please Enter a Valid Web Address" }
+		format: { with: /https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,}/ , message: " - Please Enter a Valid Web Address" }
 end
