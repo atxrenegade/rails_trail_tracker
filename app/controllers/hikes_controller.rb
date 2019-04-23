@@ -1,8 +1,8 @@
 class HikesController < ApplicationController
 	before_action :require_user
-	
+
 	def index
-		@hikes = Hike.all
+		@hikes = Hike.all.where(user_id: current_user.id)
 	end
 
 	def show

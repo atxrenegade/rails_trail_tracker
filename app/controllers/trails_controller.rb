@@ -38,8 +38,13 @@ class TrailsController < ApplicationController
 
 	def destroy
 		@trail = Trail.find_by(id: params[:id])
+		#@trail.check_associated(params)
+		#if @hikes == nil
 		@trail.destroy
 		redirect_to trails_path
+		#else
+			#redirect_to trail_path(@trail)
+		#end
 	end
 
 	private
