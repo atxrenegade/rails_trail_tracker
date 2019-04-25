@@ -14,10 +14,9 @@
 						 <p class="card-text">
 							 <%= image.trail_name %><br>
 							<%= image.username %><br>
-							<%= image.description %><br>
 						</p>
-						 <a href="" class="btn btn-outline-light btn-sm">Image Show Page</a>
-						 <%= link_to "Add Image", [:new, @imageable, :image] %><br>
+						<% @image = image %>
+						 <a href="<%= show_image_path %>" class="btn btn-outline-light btn-sm"> Image Details </a><br>
 					</div>
 				</div>
 		</div>

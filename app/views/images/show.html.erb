@@ -3,8 +3,7 @@
 	<%= @image.date %><br>
 	<%= @image.trail_name %><br>
 	<%= @image.description %><br><br>
-
+	<%= link_to "Update Image", build_images_path("edit") %><br>
 	<a href="<%= build_images_path("edit") %>"> Edit Image </a><br>
-	<a href="<%= build_images_path("destroy") %>"> Delete Image </a><br>
 	<%= link_to "Delete Image", show_image_path, method: :delete, remote: true, data: { confirm: 'Are you certain you want to delete this?' } %>
 </div>

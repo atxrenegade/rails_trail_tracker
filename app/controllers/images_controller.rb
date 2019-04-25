@@ -44,7 +44,6 @@ class ImagesController < ApplicationController
 	def update
 		@image = @imageable.images.find_by_id(params[:id])
 		@image.update(image_params)
-		binding.pry
 		path = show_image_path
 		redirect_to path, notice: "Image Updated!"
 	end
