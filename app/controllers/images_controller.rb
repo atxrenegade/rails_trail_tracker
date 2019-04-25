@@ -49,6 +49,7 @@ class ImagesController < ApplicationController
   def delete
 		@image = @imageable.images.find_by_id(params[:id])
 		@image.destroy
+		binding.pry
 		#test_#{commentable.class.to_s.downcase}_comment_path
 		#redirect_to [@imageable,:images], notice: "Image Deleted!"
 		#render :index #help what do I redirect to?
