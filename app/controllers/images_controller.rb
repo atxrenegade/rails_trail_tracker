@@ -1,4 +1,6 @@
 class ImagesController < ApplicationController
+	include ImagesHelper
+
 	before_action :load_imageable, :except => [:gallery]
 
   def index
@@ -42,11 +44,12 @@ class ImagesController < ApplicationController
 	def update
 		@image = @imageable.images.find_by_id(params[:id])
 		@image.update(image_params)
+		binding.pry
 		path = show_image_path
 		redirect_to path, notice: "Image Updated!"
 	end
 
-  def delete
+  def destroy
 		@image = @imageable.images.find_by_id(params[:id])
 		@image.destroy
 		path = images_path
