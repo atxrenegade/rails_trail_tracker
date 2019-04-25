@@ -10,13 +10,12 @@ module ImagesHelper
 	end
 
 	def build_images_path(action_type)
-		#type should be edit, update, or delete
+		#type should be edit, update, or destroy
 		return show_image_path + "/#{action_type}"
 	end
 
-
 	def collect_user_images
-		@images = Image.all.where(username: current_user.name)
+		@Image.all.where(username: current_user.name)
 	end
 
 	def collect_public_images
