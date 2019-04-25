@@ -6,4 +6,8 @@ module TrailsHelper
 			end
 			return false
 		end
+
+		def delete_images_of_trail
+			#implement functionality to delete all related trail images_path when trail is deleted
+		end
 end
