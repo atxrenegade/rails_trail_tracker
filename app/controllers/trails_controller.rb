@@ -1,4 +1,6 @@
 class TrailsController < ApplicationController
+	include TrailsHelper
+
 	before_action :require_user, only: [:show, :new, :edit]
 
 	def index
@@ -38,7 +40,7 @@ class TrailsController < ApplicationController
 
 	def destroy
 		@trail = Trail.find_by(id: params[:id])
-		#@trail.check_associated(params)
+		#check_associated(params)
 		#if @hikes == nil
 		@trail.destroy
 		redirect_to trails_path

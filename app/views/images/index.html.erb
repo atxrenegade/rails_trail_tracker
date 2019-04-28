@@ -1,6 +1,6 @@
 <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0"> Images</h1>
 <% if flash[:notice] %>
-  <div class="notice" style="color:red;"><%= flash[:notice]%></div>
+  <div class="notice" style="color:red;"><%= flash[:notice]%></div><br>
 <% end %>
-<%= render 'shared/gallery' %>
+<%= render 'shared/gallery' %><br>
 <%= link_to "Add Image", [:new, @imageable, :image] %>

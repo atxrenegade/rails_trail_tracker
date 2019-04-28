@@ -1,15 +1,25 @@
-<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">
+<h1 class="font-weight text-center text-lg-left mt-4 mb-0">
 	Welcome to Trail Tracker
 </h1>
-<p>
-	Add how to use, recent hikes, and public images here
-	Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus.
-
-	Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula.
-</p>
 <br>
+	<div class="row">
+		<div class="col-sm-4">
+			<br>
+			<p>
+				Add how to use, recent hikes, and public images here
+				Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus.
 
-<%= link_to "Go to Trails Index", trails_path %><br>
-<%= link_to "Add New Trail", new_trail_path %><br>
-<%= link_to "View All of My Hikes", hikes_path %><br>
-<%= link_to "Record New Hike", new_hike_path %><br>
+				Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula.
+			</p>
+		</div>
+		<div class="col-sm-8">
+		<br>
+			<img class="img-fluid" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Fwestkootenayhiking.ca%2Fwp-content%2Fuploads%2F2018%2F08%2FIMG_5325.jpg%3Fresize%3D1200%252C900&f=1" alt="Hiking the Kootenays">
+		<br><br>
+		<%= link_to "Go to Trails Index", trails_path,  class:"btn btn-success btn-lg btn-block" %>
+		<%= link_to "Add New Trail", new_trail_path, class:"btn btn-success btn-lg btn-block" %>
+		<%= link_to "View All of My Hikes", hikes_path, class:"btn btn-success btn-lg btn-block" %>
+		<%= link_to "Record New Hike", new_hike_path, class:"btn btn-success btn-lg btn-block" %>
+		<br>
+	</div>
+</div>
