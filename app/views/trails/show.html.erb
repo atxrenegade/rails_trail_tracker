@@ -10,14 +10,14 @@
 		Notes: <%= @trail.notes %><br>
 		<br><br>
 
-		<%= link_to "Add Image", [:new, @imageable, :image], class:"btn btn-success btn-lg btn-block" %><br>
-		<%= link_to "DELETE this Trail", trail_path(@trail), data: {confirm: "Are you sure you want to DELETE this item?", method: "delete" }, class:"btn btn-success btn-lg btn-block" %><br>
 		<%= link_to "Add Image", [:new, @imageable, :image], class:"btn btn-success btn-lg btn-block" %>
-		<%= link_to "Return to Trails Index", trails_path, class:"btn btn-success btn-lg btn-block" %><br>
-		<%= link_to "Add New Trail", new_trail_path, class:"btn btn-success btn-lg btn-block" %><br>
-		<%= link_to "Edit This Trail", edit_trail_path(@trail), class:"btn btn-success btn-lg btn-block" %><br>
-		<%= link_to "View All of My Hikes", hikes_path, class:"btn btn-success btn-lg btn-block" %><br>
-		<%= link_to "Record New Hike", new_hike_path, class:"btn btn-success btn-lg btn-block" %><br>
+		<%= link_to "DELETE this Trail", trail_path(@trail), data: {confirm: "Are you sure you want to DELETE this item?", method: "delete" }, class:"btn btn-success btn-lg btn-block" %>
+		<%= link_to "Add Image", [:new, @imageable, :image], class:"btn btn-success btn-lg btn-block" %>
+		<%= link_to "Return to Trails Index", trails_path, class:"btn btn-success btn-lg btn-block" %>
+		<%= link_to "Add New Trail", new_trail_path, class:"btn btn-success btn-lg btn-block" %>
+		<%= link_to "Edit This Trail", edit_trail_path(@trail), class:"btn btn-success btn-lg btn-block" %>
+		<%= link_to "View All of My Hikes", hikes_path, class:"btn btn-success btn-lg btn-block" %>
+		<%= link_to "Record New Hike", new_hike_path, class:"btn btn-success btn-lg btn-block" %>
 	</div>
 	<div class="col-md-4">
 		<br>
