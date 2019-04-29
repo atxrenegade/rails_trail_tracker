@@ -1,9 +1,9 @@
 <div class="form-row">
-	<%= form_for(@trail) do |f| %>
+	<%= form_for @trail do |f| %>
 		<%= render 'errors' %>
 
 		<div class="form-group row field_with_errors">
-			<%= f.label :name, class:"col-sm-10 col-form-label" %>
+			<%= f.label :name, class:"col-sm-8 col-form-label" %>
 			<div class="col-sm-12">
 				<%= f.text_field :name, class:"form-control" %>
 			</div>
@@ -60,5 +60,5 @@
 		<div class="submit-button">
 			<%= f.submit "Save Trail", class:"btn btn-primary" %><br><br>
 		</div>
-		<% end %>
-</div>
+	<% end %>
+	</div>	
