@@ -1,38 +1,41 @@
-<%= form_for @hike do |f| %>
-	<%= render 'errors' %>
+<div class="form-row">
+	<%= form_for @hike do |f| %>
+		<%= render 'errors' %>
 
-	<div class="form-group row field_with_errors">
-		<%= f.label :date_of_hike, "Date (format: mm/dd/yy)", class:"col-sm-8 col-form-label" %>
-		<div class="col-sm-10">
-			<%= f.text_field :date_of_hike, class:"form-control" %>
+		<div class="form-group row field_with_errors">
+			<%= f.label :date_of_hike, "Date (format: mm/dd/yy)", class:"col-sm-8 col-form-label" %>
+			<div class="col-sm-12">
+				<%= f.text_field :date_of_hike, class:"form-control" %>
+			</div>
+		</div>
+
+		<div class="form-group row field_with_errors">
+			<%= f.label :trail_id, "Select Trail", class:"col-sm-5 col-form-label" %><br>
+			<div class="col-sm-12">
+				<select name="hike[trail_id]" class:"form_select">
+			    <% Trail.all.each do |trail| %>
+			        <option value="<%= trail.id %>"><%= trail.name %></option>
+			    <% end %>
+				</select><br>
+			</div>
+		</div>
+
+		<div class="form-group row field_with_errors">
+			<%= f.label :comments, "Comments", class:"col-sm-5 col-form-label" %>
+			<div class="col-sm-12">
+				<%= f.text_area :comments, class:"form-control"%>
+			</div>
+		</div>
+
+		<div class="form-group row field_with_errors">
+			<div class="col-sm-12">
+				<%= f.label :is_public, "Allow this hike to be visible to other users? ", id:"checkbox_align" %>
+				<%= f.check_box :is_public, class:"form-checkbox" %>
+			<br><br>
+			</div>
+		</div>
+		<div class="submit-button">
+			<%= f.submit "Save Hike", class:"btn btn-primary"%><br><br>
 		</div>
 	</div>
-
-	<div class="form-group row field_with_errors">
-		<%= f.label :trail_id, "Select Trail", class:"col-sm-5 col-form-label" %><br>
-		<div class="col-sm-10">
-			<select name="hike[trail_id]" class:"form_select">
-		    <% Trail.all.each do |trail| %>
-		        <option value="<%= trail.id %>"><%= trail.name %></option>
-		    <% end %>
-			</select><br>
-		</div>
-	</div>
-
-	<div class="form-group row field_with_errors">
-		<%= f.label :comments, "Comments", class:"col-sm-5 col-form-label" %>
-		<div class="col-sm-10">
-			<%= f.text_area :comments, class:"form-control"%>
-		</div>
-	</div>
-
-	<div class="form-group row field_with_errors">
-		<div class="col-sm-10">
-			<%= f.label :is_public, "Allow this hike to be visible to other users? ", id:"checkbox_align" %>
-			<%= f.check_box :is_public, class:"form-checkbox" %>
-		<br><br>
-		</div>
-	</div>
-
-	<%= f.submit "Save Hike", class:"btn btn-primary"%><br><br>
 <% end %>
