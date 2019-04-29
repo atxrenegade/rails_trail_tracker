@@ -91,7 +91,13 @@ div.card-body#main-container {
 	border-style: none;
 }
 
-a {
-	font-color: #343a40 ;
-	font-weight: bold;
+a, ul, p {
+	color: #343a40 ;
+}
+
+footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
 }
