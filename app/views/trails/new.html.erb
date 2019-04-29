@@ -1,6 +1,6 @@
 <h2 class="font-weight-light text-center text-lg-left mt-4 mb-0"> Add New Trail </h2>
 <%= render @trail %>
 
-<%= link_to "Return to Trails Index", trails_path %><br>
-<%= link_to "Record New Hike", new_hike_path %><br>
-<%= link_to "View All of My Hikes", hikes_path(@user) %><br>
+<%= link_to "Return to Trails Index", trails_path, class:"btn btn-success btn-lg btn-block" %><br>
+<%= link_to "Record New Hike", new_hike_path, class:"btn btn-success btn-lg btn-block" %><br>
+<%= link_to "View All of My Hikes", hikes_path(@user), class:"btn btn-success btn-lg btn-block" %><br>
