@@ -1,8 +1,11 @@
 <div class="image">
-	<img src="<%= @image.url %>"><br>
-	<%= @image.date %><br>
-	<%= @image.trail_name %><br>
-	<%= @image.description %><br><br>
+	<img src="<%= @image.url %>" class="img-fluid non-gallery"><br><br>
+	<h4>
+		Date: <%= @image.date %><br>
+		Trail: <%= @image.trail_name %><br>
+		Description: <%= @image.description %><br>
+		Posted By: <%= @image.username %><br><br>
+	</h4>
 	<%= link_to "Update Image", build_images_path("edit") %><br>
 	<%= link_to "Delete Image", show_image_path, method: :delete, remote: true, data: { confirm: 'Are you certain you want to delete this?' } %>
 </div>

@@ -68,3 +68,25 @@ h2 {
 a.btn.btn-success.btn-lg.btn-block {
 	opacity: .9;
 }
+
+img.img-fluid.non-gallery {
+	border-width:7px;
+	border-color: whitesmoke;
+	border-style: solid;
+}
+
+img.card-img-top {
+	border-width: 5px 5px 0 5px;
+	border-color: whitesmoke;
+	border-style: solid;
+}
+
+div.card-body {
+	border-width: 0 5px 5px 5px;
+	border-color: whitesmoke;
+	border-style: solid;
+}
+
+div.card-body#main-container {
+	border-style: none;
+}
