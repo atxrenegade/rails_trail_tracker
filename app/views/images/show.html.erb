@@ -6,6 +6,6 @@
 		Description: <%= @image.description %><br>
 		Posted By: <%= @image.username %><br><br>
 	</h4>
-	<%= link_to "Update Image", build_images_path("edit") %><br>
-	<%= link_to "Delete Image", show_image_path, method: :delete, remote: true, data: { confirm: 'Are you certain you want to delete this?' } %>
+	<%= link_to "Update Image", build_images_path("edit"), class:"btn btn-success btn-lg btn-block" %><br>
+	<%= link_to "Delete Image", show_image_path, method: :delete, remote: true, data: { confirm: 'Are you certain you want to delete this?' }, class:"btn btn-success btn-lg btn-block" %>
 </div>

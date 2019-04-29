@@ -3,4 +3,4 @@
   <div class="notice" style="color:red;"><%= flash[:notice]%></div><br>
 <% end %>
 <%= render 'shared/gallery' %><br>
-<%= link_to "Add Image", [:new, @imageable, :image] %>
+<%= link_to "Add Image", [:new, @imageable, :image], class:"btn btn-success btn-lg btn-block" %>
