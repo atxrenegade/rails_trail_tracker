@@ -73,6 +73,7 @@ img.img-fluid.non-gallery {
 	border-width:7px;
 	border-color: whitesmoke;
 	border-style: solid;
+	margin-top: 40px;
 }
 
 img.card-img-top {
@@ -104,4 +105,11 @@ footer {
     height: 100px;
     bottom: 0;
     width: 100%;
+}
+
+.container-info {
+	padding: 10px 40px 10px 40px;
+	border-width: 5px;
+	border-color: whitesmoke;
+	border-style: double;
 }

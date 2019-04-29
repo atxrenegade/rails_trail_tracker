@@ -1,13 +1,19 @@
-<div class="container">
-	<h2 class="font-weight-light text-center text-lg-left mt-4 mb-0">Trails Index</h2>
-	<br>
-	<ul>
-		<% @trails.each do |trail| %>
-			<li><%= link_to trail.name, trail_path(trail) %></li>
-		<% end %><br>
-	</ul>
-	<%= link_to "Create New Trail", new_trail_path, class:"btn btn-success btn-lg btn-block" %>
-	<%= link_to "View All of My Hikes", hikes_path, class:"btn btn-success btn-lg btn-block" %>
-	<%= link_to "Record New Hike", new_hike_path, class:"btn btn-success btn-lg btn-block" %>
-	<%= render 'shared/all_images' %>
+<div class="container-info">
+	<div class="row">
+		<div class="col-sm-8">
+			<h2 class="font-weight-light text-center text-lg-left mt-4 mb-0">Trails Index</h2>
+			<br>
+			<ul>
+				<% @trails.each do |trail| %>
+					<li><%= link_to trail.name, trail_path(trail) %></li>
+				<% end %><br>
+			</ul>
+		</div>
+		<div class="col-sm-4"><br><br><br>
+			<%= link_to "Create New Trail", new_trail_path, class:"btn btn-success btn-lg btn-block" %>
+			<%= link_to "View All of My Hikes", hikes_path, class:"btn btn-success btn-lg btn-block" %>
+			<%= link_to "Record New Hike", new_hike_path, class:"btn btn-success btn-lg btn-block" %>
+		</div>
+	</div>
 </div>
+<%= render 'shared/all_images' %>
