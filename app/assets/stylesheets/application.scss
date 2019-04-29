@@ -57,12 +57,15 @@ h1 {
 	font-family: 'Dancing Script', cursive;
 	font-size: 4.5em;
 	color: whitesmoke;
+	margin-bottom: -10px;
 }
 
 h2 {
 	font-family: 'Dancing Script', cursive;
 	font-size: 3.0em;
 	color: whitesmoke;
+	margin-bottom: -5px;
+	padding-bottom: -5px;
 }
 
 a.btn.btn-success.btn-lg.btn-block {
@@ -108,7 +111,7 @@ footer {
 }
 
 .container-info {
-	padding: 10px 40px 10px 40px;
+	padding: 10px 40px 20px 40px;
 	border-width: 5px;
 	border-color: whitesmoke;
 	border-style: double;
