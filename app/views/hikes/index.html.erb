@@ -1,10 +1,9 @@
-<div class="container">
-	<h3 class="font-weight-light text-center text-lg-left mt-4 mb-0"> Completed Hikes for </h3>
-	<h2>
-		<%= current_user.name %>
-	</h2>
-	<div class="row">
-		<div class="col-sm-8">
+<div class="row">
+	<div class="col-sm-8">
+		<h3 class="font-weight-light text-center text-lg-left mt-4 mb-0"> Completed Hikes for </h3>
+		<h2>
+			<%= current_user.name %>
+		</h2>
 			<br>
 			<ol>
 				<% @hikes.each do |hike| %>
@@ -14,7 +13,7 @@
 					<% end %>
 			</ol>
 		</div>
-		<div class="col-sm-4">
+		<div class="col-sm-4"><br><br><br>
 			<%= link_to "Record New Hike", new_hike_path, class:"btn btn-success btn-lg btn-block" %>
 			<%= link_to "Return to Trails Index", trails_path, class:"btn btn-success btn-lg btn-block" %>
 			<%= link_to "Add New Trail", new_trail_path, class:"btn btn-success btn-lg btn-block" %>
