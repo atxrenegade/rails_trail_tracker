@@ -40,7 +40,10 @@ select, .form-control {
 }
 
 input[type="checkbox"] {
-	width: 30px; height: 30px;
+	width: 30px;
+	height: 30px;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 #checkbox_align {
