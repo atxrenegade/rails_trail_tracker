@@ -1,29 +1,31 @@
-<%= form_for [@imageable, @image] do |f| %>
-	<%= render 'shared/errors' %>
-	<div class="form-group row field_with_errors">
-			<%= f.label :url, "Enter image URL", class:"col-sm-8 col-form-label" %>
-			<div class="col-sm-10">
-				<%= f.text_field :url, class:"form-control" %>
-			</div>
-	</div>
+<div class="form-row">
+	<%= form_for [@imageable, @image] do |f| %>
+		<%= render 'shared/errors' %>
+		<div class="form-group row field_with_errors">
+				<%= f.label :url, "Enter image URL", class:"col-sm-8 col-form-label" %>
+				<div class="col-sm-4">
+					<%= f.text_field :url, class:"form-control" %>
+				</div>
+		</div>
 
-	<div class="form-group row field_with_errors">
-			<%= f.label :date, "Date (format: mm/dd/yy)", class:"col-sm-8 col-form-label" %>
-			<div class="col-sm-10">
-				<%= f.text_field :date, class:"form-control" %>
-			</div>
-	</div>
-	<div class="form-group row field_with_errors">
-			<%= f.label :trail_id, "Description", class:"col-sm-8 col-form-label" %>
-			<div class="col-sm-10">
-				<%= f.text_field :description, class:"form-control" %>
-			</div>
-	</div>
+		<div class="form-group row field_with_errors">
+				<%= f.label :date, "Date (format: mm/dd/yy)", class:"col-sm-8 col-form-label" %>
+				<div class="col-sm-4">
+					<%= f.text_field :date, class:"form-control" %>
+				</div>
+		</div>
+		<div class="form-group row field_with_errors">
+				<%= f.label :trail_id, "Description", class:"col-sm-8 col-form-label" %>
+				<div class="col-sm-4">
+					<%= f.text_field :description, class:"form-control" %>
+				</div>
+		</div>
 
-	<div class="form-group row field_with_errors">
-		<%= f.label :is_public, "Allow this image to be visible to other users? ", id:"checkbox_align" %>
-		<%= f.check_box :is_public, class:"form-checkbox" %>
-	</div>
+		<div class="form-group row field_with_errors">
+			<%= f.label :is_public, "Allow this image to be visible to other users? ", id:"checkbox_align" %>
+			<%= f.check_box :is_public, class:"form-checkbox" %>
+		</div>
 
-	<%= f.submit "Save Image", class:"btn btn-primary" %>
-<% end %>
+		<%= f.submit "Save Image", class:"btn btn-primary" %>
+	<% end %>
+</div>
