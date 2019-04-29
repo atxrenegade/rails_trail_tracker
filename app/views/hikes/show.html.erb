@@ -20,12 +20,11 @@
 		Comments: <%= @hike.comments %><br>
 
 		<br>
-		<%= link_to "DELETE this Hike", hike_path(@hike), data: {confirm: "Are you sure you want to DELETE this item?", method: "delete" }, class:"btn btn-success btn-lg btn-block" %>
 		<%= link_to "Add Image", [:new, @imageable, :image], class:"btn btn-success btn-lg btn-block" %>
-		<%= link_to "View All of My Hikes", hikes_path, class:"btn btn-success btn-lg btn-block" %>
 		<%= link_to "Record New Hike", new_hike_path, class:"btn btn-success btn-lg btn-block" %>
 		<%= link_to "Edit This Hike", edit_hike_path(@hike), class:"btn btn-success btn-lg btn-block" %>
+		<%= link_to "DELETE this Hike", hike_path(@hike), data: {confirm: "Are you sure you want to DELETE this item?", method: "delete" }, class:"btn btn-success btn-lg btn-block" %>
+		<%= link_to "View All of My Hikes", hikes_path, class:"btn btn-success btn-lg btn-block" %>
 		<%= link_to "Return to Trails Index", trails_path, class:"btn btn-success btn-lg btn-block" %>
-		<%= link_to "Add New Trail", new_trail_path, class:"btn btn-success btn-lg btn-block" %>
 	</div>
 </div>
