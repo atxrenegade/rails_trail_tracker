@@ -60,5 +60,4 @@ ActiveRecord::Schema.define(version: 2019_04_19_051405) do
     t.datetime "updated_at", null: false
     t.integer "uid"
   end
-
 end
