@@ -13,6 +13,12 @@ module ImagesHelper
 		return show_image_path + "#{action_type}"
 	end
 
+	def build_image_params(params)
+		username = current_user.name
+		image_params = {url: params["image"]["url"], date: params["image"]["date"], trail_name: @trail_name, username: username, is_public: params["image"]["is_public"], description: params["image"]["description"], hike_id: hike_id, imageable_type: @image.imageable_type, imageable_id: @image.imageable_id}
+		return image_params
+	end
+
 	def check_type
 		if @image.imageable_type == "Hike"
 			set_hike_variables

@@ -19,19 +19,8 @@ class ImagesController < ApplicationController
   def create
 		@image = @imageable.images.new(params[:images])
 		check_type
-
-		if @image.imageable_type == "Hike"
-			@hike = Hike.all.find_by_id(params["hike_id"])
-			@trail_name = Trail.all.find_by_id(@hike.trail_id).name
-		elsif @image.imageable_type == "Trail"
-			@trail_name = Trail.all.find_by_id(@image.imageable_id).name
-		else
-			@trail_name = 'n/a'
-		end
 		binding.pry
-		username = current_user.name
-		image_params = {url: params["image"]["url"], date: params["image"]["date"], trail_name: @trail_name, username: username, is_public: params["image"]["is_public"], description: params["image"]["description"], hike_id: hike_id, imageable_type: @image.imageable_type, imageable_id: @image.imageable_id}
-		@image = Image.create(image_params)
+		@image = Image.create(build_image_params)
 		if @image.save
 			path = show_image_path
 			redirect_to path, notice: "Image Saved!"
@@ -47,7 +36,7 @@ class ImagesController < ApplicationController
 
 	def update
 		@image = @imageable.images.find_by_id(params[:id])
-		@image.update(image_params)
+		@image.update(image_params(params))
 		path = show_image_path
 		redirect_to path, notice: "Image Updated!"
 	end
