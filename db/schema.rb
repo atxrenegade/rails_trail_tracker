@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2019_04_30_041125) do
     t.datetime "updated_at", null: false
     t.string "imageable_type"
     t.integer "imageable_id"
-    t.integer "hike_id"
+    t.integer "hike_id", default: 0
     t.index ["imageable_id", "imageable_type"], name: "index_images_on_imageable_id_and_imageable_type"
     t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
   end

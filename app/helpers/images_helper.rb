@@ -10,7 +10,7 @@ module ImagesHelper
 	end
 
 	def build_images_path(action_type)
-		return show_image_path + "/#{action_type}"
+		return show_image_path + "#{action_type}"
 	end
 
 	def collect_user_images
@@ -18,7 +18,6 @@ module ImagesHelper
 	end
 
 	def collect_user_hike_images
-		binding.pry
 		hike_id = @hike.id
 		@images = Image.where(username: current_user.name).where(hike_id: hike_id)
 	end

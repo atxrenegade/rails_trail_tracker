@@ -1,7 +1,7 @@
 class ImagesController < ApplicationController
 	include ImagesHelper
 
-	before_action :load_imageable, :except => [:gallery]
+	before_action :load_imageable, :except => [:gallery, :create]
 
   def index
 		@images = @imageable.images
@@ -13,6 +13,8 @@ class ImagesController < ApplicationController
 
   def new
 		@image = @imageable.images.new(params[:images])
+		path = build_images_path(create)
+		render path
   end
 
   def create
@@ -27,10 +29,11 @@ class ImagesController < ApplicationController
 		end
 
 		username = current_user.name
-		image_params = {url: params["image"]["url"], date: params["image"]["date"], trail_name: @trail_name, username: username, is_public: params["image"]["is_public"], description: params["image"]["description"], imageable_type: @image.imageable_type, imageable_id: @image.imageable_id}
+		image_params = {url: params["image"]["url"], date: params["image"]["date"], trail_name: @trail_name, username: username, is_public: params["image"]["is_public"], description: params["image"]["description"], hike_id: @hike.id, imageable_type: @image.imageable_type, imageable_id: @image.imageable_id}
 		@image = Image.create(image_params)
 		if @image.save
-			redirect_to [@imageable,:images], notice: "Image Saved!"
+			path = show_image_path
+			redirect_to path, notice: "Image Saved!"
 		else
 			render :new
 		end
@@ -66,6 +69,6 @@ class ImagesController < ApplicationController
 	end
 
 	def image_params
-		params.require(:image).permit(:url, :date, :is_public, :trail_name, :username, :description, :imageable_type, :imageable_id)
+		params.require(:image).permit(:url, :date, :is_public, :trail_name, :username, :description, :hike_id, :imageable_type, :imageable_id)
 	end
 end
