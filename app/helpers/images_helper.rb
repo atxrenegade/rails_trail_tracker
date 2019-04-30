@@ -13,6 +13,16 @@ module ImagesHelper
 		return show_image_path + "#{action_type}"
 	end
 
+	def check_type
+		if @image.imageable_type == "Hike"
+			set_hike_variables
+		elsif @image.imageable_type == "Trail"
+			set_hike_variables
+		else
+			set_user_variables
+		end
+	end
+
 	def collect_user_images
 		@images = Image.where(username: current_user.name)
 	end
@@ -30,5 +40,18 @@ module ImagesHelper
 
 	def collect_public_images
 		@images = Image.where(is_public: true)
+	end
+
+	def set_hike_variables
+		@hike = Hike.all.find_by_id(params["hike_id"])
+		@trail_name = Trail.all.find_by_id(@hike.trail_id).name
+	end
+
+	def set_trail_variables
+		@trail_name = Trail.all.find_by_id(@image.imageable_id).name
+	end
+
+	def set_user_variables
+		@trail_name = 'n/a'
 	end
 end
