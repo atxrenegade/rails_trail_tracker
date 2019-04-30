@@ -1,10 +1,12 @@
 class HikesController < ApplicationController
 	include HikesHelper
+	extend HikesHelper
 
 	before_action :require_user
 
 	def index
 		@hikes = Hike.all.where(user_id: current_user.id)
+		@public_hikes = Hike.all.where(is_public: true)
 	end
 
 	def show

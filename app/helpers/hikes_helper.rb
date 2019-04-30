@@ -1,4 +1,8 @@
 module HikesHelper
+	def public_user
+		return User.find_by(id: hike.user_id).name
+	end
+
 	def check_associated(params)
 		@images = Image.find_by()
 		if (@images != nil)

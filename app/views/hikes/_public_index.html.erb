@@ -1,0 +1,18 @@
+<br>
+<div class="container-info">
+	<div class="row">
+		<div class="col-sm-8">
+			<h2>
+				Recent Hikes
+			</h2>
+				<br>
+				<ol>
+					<% @public_hikes.each do |hike| %>
+							<li><%= link_to(hike) do %>
+								<%= hike.date_of_hike %>  -  <%= hike.trail.name %> - username </li>
+							<% end %>
+						<% end %>
+				</ol>
+			</div>
+	</div>
+</div>
