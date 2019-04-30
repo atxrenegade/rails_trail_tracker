@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_19_051405) do
+ActiveRecord::Schema.define(version: 2019_04_30_041125) do
 
   create_table "hikes", force: :cascade do |t|
     t.integer "user_id"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2019_04_19_051405) do
     t.datetime "updated_at", null: false
     t.string "imageable_type"
     t.integer "imageable_id"
+    t.integer "hike_id"
     t.index ["imageable_id", "imageable_type"], name: "index_images_on_imageable_id_and_imageable_type"
     t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
   end
@@ -60,4 +61,5 @@ ActiveRecord::Schema.define(version: 2019_04_19_051405) do
     t.datetime "updated_at", null: false
     t.integer "uid"
   end
+
 end
