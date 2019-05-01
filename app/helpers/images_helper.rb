@@ -47,11 +47,11 @@ module ImagesHelper
 		@images = Image.where(trail_name: trail_name).where(username: current_user.name)
 	end
 
+
 	def collect_public_trail_images
 		trail_name = @trail.name
 		@images = Image.where(trail_name: trail_name).where(is_public: true)
 	end
-
 
 	def collect_public_images
 		@images = Image.where(is_public: true)

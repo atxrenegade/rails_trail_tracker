@@ -29,9 +29,13 @@
 			<%= link_to "Return to Trails Index", trails_path, class:"btn btn-success btn-lg btn-block" %>
 		</div>
 	</div>
-<div>
-<div class="container">
-  <h2 class="font-weight-light text-center text-lg-left mt-4 mb-0">My Images of Hike<%=@hike.id%></h2><br>
-	<% collect_user_hike_images %>
-	<%= render 'shared/gallery' %>
-</div>
+</div><br><br>
+<% collect_user_hike_images %>
+<% if !@images.empty? %>
+	<div class="container">
+	  <h2 class="font-weight-light text-center text-lg-left mt-4 mb-0">My Images for this Hike<%=@hike.id%></h2><br>
+		<%= render 'shared/gallery' %>
+	</div>
+<% else %>
+	<h4> There are no images for this hike. </h4>
+<% end %>
