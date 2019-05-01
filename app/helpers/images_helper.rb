@@ -34,7 +34,7 @@ module ImagesHelper
 	end
 
 	def collect_user_images
-		@images = Image.where(username: current_user.name)
+		@images = Image.where(username: current_user.name).where.not(imageable_type: "User")
 	end
 
 	def collect_user_hike_images
@@ -54,7 +54,7 @@ module ImagesHelper
 	end
 
 	def collect_public_images
-		@images = Image.where(is_public: true)
+		@images = Image.where(is_public: true).where.not(imageable_type: "User")
 	end
 
 	def set_hike_variables
