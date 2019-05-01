@@ -7,9 +7,10 @@
 			</h2>
 				<br>
 				<ol>
-					<% @public_hikes.each do |hike| %>
+					<% collect_recent_hikes %>
+					<% @recent_hikes.each do |hike| %>
 							<li><%= link_to(hike) do %>
-								<%= hike.date_of_hike %>  -  <%= hike.trail.name %> - username </li>
+								<%= hike.date_of_hike %>  -  <%= hike.trail.name %> - <%= public_user(hike) %> </li>
 							<% end %>
 						<% end %>
 				</ol>

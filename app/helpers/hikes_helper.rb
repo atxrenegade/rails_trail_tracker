@@ -1,6 +1,6 @@
 module HikesHelper
-	def public_user
-		return User.find_by(id: hike.user_id).name
+	def public_user(hike)
+		 User.find_by(id: hike.user_id).name
 	end
 
 	def check_associated(params)
@@ -13,5 +13,9 @@ module HikesHelper
 
 	def delete_images_of_trail
 		#implement functionality to delete all related trail images_path when trail is deleted
+	end
+
+	def collect_recent_hikes
+		@recent_hikes = Hike.where(is_public: true).last(5)
 	end
 end
