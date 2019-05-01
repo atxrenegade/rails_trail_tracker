@@ -19,14 +19,19 @@ module ImagesHelper
 		return image_params
 	end
 
-	def check_type
+	def check_image_type
 		if @image.imageable_type == "Hike"
 			set_hike_variables
 		elsif @image.imageable_type == "Trail"
-			set_hike_variables
+			set_trail_variables
 		else
+			check_for_existing_profile_pic
 			set_user_variables
 		end
+	end
+
+	def check_for_existing_profile_pic
+		@profile_pic = Image.where(username: current_user.name).where(imageable_type: User)
 	end
 
 	def collect_user_images
@@ -49,11 +54,13 @@ module ImagesHelper
 	end
 
 	def set_hike_variables
+		#refactor into active recird query statements
 		@hike = Hike.all.find_by_id(params["hike_id"])
 		@trail_name = Trail.all.find_by_id(@hike.trail_id).name
 	end
 
 	def set_trail_variables
+		#refactor into active recird query statements
 		@trail_name = Trail.all.find_by_id(@image.imageable_id).name
 	end
 

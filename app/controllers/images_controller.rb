@@ -1,7 +1,7 @@
 class ImagesController < ApplicationController
 	include ImagesHelper
 
-	before_action :load_imageable, :except => [:gallery, :create]
+	before_action :load_imageable, :except => [:gallery]
 
   def index
 		@images = @imageable.images
@@ -13,19 +13,24 @@ class ImagesController < ApplicationController
 
   def new
 		@image = @imageable.images.new(params[:images])
-
+		check_image_type
+		if (@profile_pic != nil?)
+			render edit
+		end
   end
 
   def create
+		binding.pry
+		#clean this up - redundant and complex
 		@image = @imageable.images.new(params[:images])
 		check_type
-		binding.pry
-		@image = Image.create(build_image_params)
+		image_params = build_image_params(params)
+		@image = Image.create(image_params)
 		if @image.save
 			path = show_image_path
 			redirect_to path, notice: "Image Saved!"
 		else
-			render :new
+			render :new, notice: "Image Save ERROR!"
 		end
   end
 
