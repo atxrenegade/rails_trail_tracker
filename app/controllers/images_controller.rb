@@ -14,9 +14,6 @@ class ImagesController < ApplicationController
   def new
 		@image = @imageable.images.new(params[:images])
 		check_image_type
-		if (@profile_pic != nil?)
-			render edit
-		end
   end
 
   def create

@@ -25,12 +25,11 @@ module ImagesHelper
 		elsif @image.imageable_type == "Trail"
 			set_trail_variables
 		else
-			check_for_existing_profile_pic
 			set_user_variables
 		end
 	end
 
-	def check_for_existing_profile_pic
+	def profile_pic
 		@profile_pic = Image.find_by(username: current_user.name, imageable_type: "User")
 	end
 
