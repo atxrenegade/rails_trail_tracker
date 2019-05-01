@@ -8,6 +8,11 @@
 			Username: <%= current_user.name %><br>
 			Email: <%= current_user.email %>
 		</div>
+		<div>
+			<% if check_for_existing_profile_pic != nil %>
+				<img class="img img-fluid non-gallery card-img-top" src="<%= @profile_pic.url %>">
+			<% end %>
+		</div>
 		<div class="col-sm-4"><br>
 			<%= link_to "Add Image", [:new, @imageable, :image], class:"btn btn-success btn-lg btn-block" %>
 			<%= link_to "Return to Trails Index", trails_path, class:"btn btn-success btn-lg btn-block" %>

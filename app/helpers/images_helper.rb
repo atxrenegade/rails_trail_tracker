@@ -31,7 +31,7 @@ module ImagesHelper
 	end
 
 	def check_for_existing_profile_pic
-		@profile_pic = Image.where(username: current_user.name).where(imageable_type: User)
+		@profile_pic = Image.find_by(username: current_user.name, imageable_type: "User")
 	end
 
 	def collect_user_images
