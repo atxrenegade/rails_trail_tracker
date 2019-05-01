@@ -9,9 +9,13 @@
 			Email: <%= current_user.email %>
 		</div>
 		<div class="col-sm-4"><br>
-			<% binding.pry %>
-			<img class="profile-pic img-fluid" src="<%= @profile_pic.url %>">
-			<%= link_to "Edit Profile Pic", [:edit, @imageable, :image], class:"btn btn-success btn-lg btn-block" %>
+			<% if @profile_pic %>
+				<img class="profile-pic img-fluid" src="<%= @profile_pic.url %>">
+				<%= link_to "Edit Profile Pic", [:edit, @imageable, :image], class:"btn btn-success btn-lg btn-block" %>
+			<% else %>
+				<img class="profile-pic img-fluid" src="<%= default_profile_pic_URL %>">
+				<%= link_to "Add Profile Pic", [:new, @imageable, :image], class:"btn btn-success btn-lg btn-block" %>
+			<% end %>
 			<%= link_to "Return to Trails Index", trails_path, class:"btn btn-success btn-lg btn-block" %>
 			<%= link_to "View All of My Hikes", hikes_path, class:"btn btn-success btn-lg btn-block" %><br>
 		</div>

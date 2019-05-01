@@ -30,7 +30,7 @@ module ImagesHelper
 	end
 
 	def profile_pic
-		@profile_pic = Image.find_by(username: current_user.name, imageable_type: "User").or(Image.where(id: 0))
+		@profile_pic = Image.find_by(username: current_user.name, imageable_type: "User")
 	end
 
 	def collect_user_images
@@ -53,13 +53,13 @@ module ImagesHelper
 	end
 
 	def set_hike_variables
-		#refactor into active recird query statements
+		#refactor into activerecord query statements
 		@hike = Hike.all.find_by_id(params["hike_id"])
 		@trail_name = Trail.all.find_by_id(@hike.trail_id).name
 	end
 
 	def set_trail_variables
-		#refactor into active recird query statements
+		#refactor into activerecord query statements
 		@trail_name = Trail.all.find_by_id(@image.imageable_id).name
 	end
 
