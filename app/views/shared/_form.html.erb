@@ -1,7 +1,5 @@
-
 <div class="form-row">
 	<%= form_for [@imageable, @image] do |f| %>
-	<%binding.pry%>
 		<%= render 'shared/errors' %>
 		<div class="form-group row field_with_errors">
 				<%= f.label :url, "Enter image URL", class:"col-sm-8 col-form-label" %>

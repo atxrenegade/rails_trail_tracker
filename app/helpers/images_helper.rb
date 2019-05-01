@@ -10,7 +10,7 @@ module ImagesHelper
 	end
 
 	def build_images_path(action_type)
-		return show_image_path + "#{action_type}"
+		return show_image_path + "/#{action_type}"
 	end
 
 	def build_image_params(params)
@@ -30,7 +30,7 @@ module ImagesHelper
 	end
 
 	def profile_pic
-		@profile_pic = Image.find_by(username: current_user.name, imageable_type: "User")
+		@profile_pic = Image.find_by(username: current_user.name, imageable_type: "User").or(Image.where(id: 0))
 	end
 
 	def collect_user_images
