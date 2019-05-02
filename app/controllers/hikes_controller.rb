@@ -47,7 +47,12 @@ class HikesController < ApplicationController
 
 	def destroy
 		@hike = Hike.find_by(id: params[:id])
-		@hike.destroy
+		if check_associated == false
+			@hike.destroy
+		else
+			delete_associated_images
+			@hike.destroy
+		end
 		redirect_to hikes_path
 	end
 

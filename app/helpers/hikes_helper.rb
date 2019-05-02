@@ -14,10 +14,10 @@ module HikesHelper
 		 User.find_by(id: hike.user_id).name
 	end
 
-	def check_associated(params)
+	def check_associated
 		@images = Image.where(hike_id: @hike.id)
 		if (@images != nil)
-			flash[:notice] = "Deleting this hike will also delete associated images!"
+			flash[:notice] = "Deleting this hike will also delete associated images!\n Would you like to continue?"
 		end
 		return false
 	end
