@@ -38,18 +38,15 @@ module ImagesHelper
 	end
 
 	def collect_user_hike_images
-		hike_id = @hike.id
-		@images = Image.where(username: current_user.name).where(hike_id: hike_id)
+		@images = Image.where(username: current_user.name).where(hike_id: @hike.id)
 	end
 
 	def collect_user_trail_images
-		trail_name = @trail.name
-		@images = Image.where(trail_name: trail_name).where(username: current_user.name)
+		@images = Image.where(trail_name: @trail.name).where(username: current_user.name)
 	end
 
 	def collect_public_trail_images
-		trail_name = @trail.name
-		@images = Image.where(trail_name: trail_name).where(is_public: true)
+		@images = Image.where(trail_name: @trail.name).where(is_public: true)
 	end
 
 	def collect_public_images
@@ -57,14 +54,12 @@ module ImagesHelper
 	end
 
 	def set_hike_variables
-		#refactor into activerecord query statements
-		@hike = Hike.all.find_by_id(params["hike_id"])
-		@trail_name = Trail.all.find_by_id(@hike.trail_id).name
+		@hike = Hike.where(id: params["hike_id"])
+		@trail_name = Trail.where(id: @hike.trail_id).name
 	end
 
 	def set_trail_variables
-		#refactor into activerecord query statements
-		@trail_name = Trail.all.find_by_id(@image.imageable_id).name
+		@trail_name = Trail.where(id: @image.imageable_id).name
 	end
 
 	def set_user_variables
