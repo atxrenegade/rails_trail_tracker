@@ -21,16 +21,8 @@ class HikesController < ApplicationController
 	end
 
 	def create
-		user = current_user.id
-	  params["is_public"] == 1 ? is_public = true : is_public = false
-		#can this be simplified using an exisitng helper or method?
-
-		hike_params = {"date_of_hike": params["hike"]["date_of_hike"],
- 		"trail_id": params["hike"]["trail_id"],
- 		"comments": params["hike"]["comments"],
- 		"is_public": is_public, "user_id": user}
-
-		@hike = Hike.create(hike_params)
+		build_hike_params(params)
+		@hike = Hike.create(@hike_params)
 		if @hike.save
 			redirect_to hike_path(@hike)
 		else
