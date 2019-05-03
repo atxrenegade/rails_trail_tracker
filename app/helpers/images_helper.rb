@@ -14,6 +14,7 @@ module ImagesHelper
 	end
 
 	def build_image_params(params)
+		binding.pry
 		username = current_user.name
 		#set_hike_id **** find or default @hike.id, check set hike variables
 		@image_params = {url: params["image"]["url"], date: params["image"]["date"], trail_name: @trail_name, username: username, is_public: params["image"]["is_public"], description: params["image"]["description"], hike_id: hike_id, imageable_type: @image.imageable_type, imageable_id: @image.imageable_id}

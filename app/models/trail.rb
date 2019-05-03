@@ -4,11 +4,11 @@ class Trail < ApplicationRecord
 	has_many :images, as: :imageable
 
 	validates :name,
- 		presence: { message: "cannot be blank"},
- 		uniqueness: { message: "This trail already exists." }
+ 		presence: { message: " - cannot be blank"},
+ 		uniqueness: { message: " - This trail already exists." }
 
 	validates :start_point,
-		presence: { message: "cannot be blank"}
+		presence: { message: "- cannot be blank"}
 
 	validates :difficulty_rating,
 		presence: true,
