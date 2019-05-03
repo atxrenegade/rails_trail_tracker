@@ -1,87 +1,69 @@
-1. revisit project requirements:
-	You must include and make use of a nested resource with the appropriate RESTful URLs.
+TO DO LIST
 
-    • You must include a nested new route with form that relates to the parent resource
+CORE APP FUNCTIONALITY
+-create and test delete associated functionality
+-add privacy page for facebook oauth to function correctly
+-fill out documentation
+-fill out landing/welcome page
+-add linked footer
+-center image on image show page
 
-    • You must include a nested index or show route
+CORE BONUS
+-add stars for difficulty_rating
+-add checkboxes for terrain with rails serializer for db object
+-add password recovery
 
-		>>>>hike is nested form within a trail
-		>>>> show all hikes for a trail
+COMMENTS FEATURE
+ -Comment Models:
+  	trail_comment - belongs_to :user, belongs_to :trail
+		hike_comment - belongs_to :user, belongs_to :hike
+		hike - has_many :hike_comments
+		trail - has_many :trail_comments
+		user - has_many :trail_comments, has_many :hike_comments
 
-		>>>>> save user comments for RAILS/JS
+		index/show/new/edit js views
+		update/delete/create actions
 
-		DON'T FORGET TO RECORD 30 minutes of coding minimum
+		Trail Show page -
+			displays index of existing comments for this Trail
+			display add trail_comments
+			add new comment button listens for click
+			new comment button appends new comment form to DOM
+			new comment form listens for click
+			new comment form button hides new comment form and adds new comment to DOM
 
-	Your models must:
+		Hike Show page -
+			displays index of existing comments for this Hike
+			display add hike_comments
+			add new comment button listens for click
+			new comment button appends new comment form to DOM
+			new comment form listens for click
+			new comment form button hides new comment form and adds new comment to DOM
 
-			• Include at least one has_many, at least one belongs_to, and at least two has_many :through relationships
+		User Show page - aka Profile Page
+			displays index of existing comments for this USER (in order of most recent)
+			each comment_content links to comment_show page
 
-			• Include a many-to-many relationship implemented with has_many :through associations. The join table must include a user-submittable attribute — that is to say, some attribute other than its foreign keys that can be submitted by the app's user
+		Hike_Comment/Trail Comment Show Page
+				shows individual comment
+				js edit button with click event listener
+				 -revises comments and displays edited version on the DOM
+				js delete button with click ever listener
+				 -deletes comment and reroutes to user/profile page (comment index)
 
-		FOUR models
-			USER/HIKER -
-				has_many :hikes
-				has_many :trails, through: :hikes
-			TRAILS
-				has_many :hikes
-				has_many :users, through: :hikes
-				has_one :map_api
-			HIKES
-				belongs_to :trail
-				belongs_to :user
-				has_one :map_api through: :trails
-			MAP_API
-				belongs_to :trail (JS/RAILS?)
+GOOGLE MAPS FEATURE
 
-			  **********You must include at least one class level ActiveRecord scope method. ----which would be what exactly?
+	functionality:
+	- Set trail location on map
+	- Display trail location on map
+	- Get directions to location on map
 
-				-find_all user/hikers for a particular trail?
-
-				review https://guides.rubyonrails.org/association_basics.html
-
-				which google maps api am I using?
-				what functionality do I want to include?
-					-map of trail location
-					-users geolocation in relation to trail
-					-should I wait for JS/Rails to add maps and comments using js?
-					- google places api or geo encoding api?
-				- add images for trail/hike?
-
-2. create hikes belongs_to :user and :trail association in database
-3. create hikes association on new hike form that shows drop down menu for existing trails and saves new hike to the appropriate users
-4. finish hikes index view pages
-5. finish hikes show view page
-6. add date formatting user location and validation for date_of_hike
-7. add update view page for both trails and hikes_params
-8. Add a nested view page for user to view all hikes associated with a specific trail
-9. Add a nested view page to show all hikes and users for a specific trail
-10. add css styling
-11. study google maps api
-12. figure out what attributes my trail model need to store and retrieve trail location information from google maps api
-13. create a google maps api controller
-14. determine how to display trail location information
-15. add trail location map to trail view page
-16. add css formatting and styling
-17. make video showing how to use app
-18. write blog post about app
-
-Requirements
-
-    **********You must include at least one class level ActiveRecord scope method. a. Your scope method must be chainable, meaning that you must use ActiveRecord Query methods within it (such as .where and .order) rather than native ruby methods (such as #find_all or #sort).
-
-    Your authentication system must also allow login from some other service. Facebook, Twitter, Foursquare, Github, etc...
-
-    You must include and make use of a nested resource with the appropriate RESTful URLs.
-
-        • You must include a nested new route with form that relates to the parent resource
-
-        • You must include a nested index or show route
-
-
-    Your application must be, within reason, a DRY (Do-Not-Repeat-Yourself) rails app.
-
-        • Logic present in your controllers should be encapsulated as methods in your models.
-
-        • Your views should use helper methods and partials when appropriate.
-
-        • Follow patterns in the Rails Style Guide and the Ruby Style Guide.
+	A. SET TRAIL LOCATION
+			-add functionality to set start of trail on map by address
+			-add functionality to set start of trail on map by current location
+			-add functionality to set end of trail on map by address
+			-add functionality to set end of trail on map by current location
+	B. DISPLAY MAP OF TRAIL
+			-display map of trail start
+			-display map of trail end point
+	C. ALLOW USER TO GET DIRECTIONS TO START OF TRAIL
