@@ -17,12 +17,10 @@ class ImagesController < ApplicationController
   end
 
   def create
-		binding.pry
-		#clean this up - redundant and complex
 		@image = @imageable.images.new(params[:images])
-		check_type
-		image_params = build_image_params(params)
-		@image = Image.create!(image_params)
+		check_image_type
+		build_image_params(params)
+		@image = Image.create!(@image_params)
 		if @image.save
 			path = show_image_path
 			redirect_to path, notice: "Image Saved!"
@@ -38,7 +36,7 @@ class ImagesController < ApplicationController
 
 	def update
 		@image = @imageable.images.find_by_id(params[:id])
-		@image.update(image_params(params))
+		@image.update(image_params)
 		path = show_image_path
 		redirect_to path, notice: "Image Updated!"
 	end
