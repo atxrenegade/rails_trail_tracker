@@ -6,7 +6,7 @@ class User < ApplicationRecord
 	has_many :images, as: :imageable
 
 	validates :name,
-		presence: { message: "cannot be blank"},
+		presence: { message: "- cannot be blank"},
 		uniqueness: { message: "This username has already been taken." }
 
 	validates :email,

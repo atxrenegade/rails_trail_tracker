@@ -1,8 +1,12 @@
 module ImagesHelper
-	def images_path
+	def imageable_path
 		type = @image.imageable_type.downcase + 's'
 		type_id = @image.imageable_id
-		return "/#{type}/#{type_id}/images"
+		return "/#{type}/#{type_id}"
+	end
+
+	def images_path
+		return imageable_path + "/images"
 	end
 
 	def show_image_path
@@ -14,10 +18,8 @@ module ImagesHelper
 	end
 
 	def build_image_params(params)
-		binding.pry
 		username = current_user.name
-		#set_hike_id **** find or default @hike.id, check set hike variables
-		@image_params = {url: params["image"]["url"], date: params["image"]["date"], trail_name: @trail_name, username: username, is_public: params["image"]["is_public"], description: params["image"]["description"], hike_id: hike_id, imageable_type: @image.imageable_type, imageable_id: @image.imageable_id}
+		@image_params = {url: params["image"]["url"], date: params["image"]["date"], trail_name: @trail_name, username: username, is_public: params["image"]["is_public"], description: params["image"]["description"], hike_id: @hike_id, imageable_type: @image.imageable_type, imageable_id: @image.imageable_id}
 	end
 
 	def check_image_type
@@ -55,15 +57,17 @@ module ImagesHelper
 	end
 
 	def set_hike_variables
-		@hike = Hike.where(id: params["hike_id"])
-		@trail_name = Trail.where(id: @hike.trail_id).name
+		@trail_name = Trail.find_by_id(@imageable.trail_id).name
+		@hike_id = @imageable.id
 	end
 
 	def set_trail_variables
-		@trail_name = Trail.where(id: @image.imageable_id).name
+		@trail_name = @imageable.name
+		@hike_id = 0
 	end
 
 	def set_user_variables
 		@trail_name = 'n/a'
+		@hike_id = 0
 	end
 end

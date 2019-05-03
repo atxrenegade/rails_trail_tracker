@@ -44,7 +44,7 @@ class ImagesController < ApplicationController
   def destroy
 		@image = @imageable.images.find_by_id(params[:id])
 		@image.destroy
-		path = images_path
+		path = imageable_path
 		redirect_to path, notice: "Image Deleted!"
   end
 
