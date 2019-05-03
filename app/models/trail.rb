@@ -4,7 +4,8 @@ class Trail < ApplicationRecord
 	has_many :images, as: :imageable
 
 	validates :name,
-		presence: { message: "cannot be blank"}
+ 		presence: { message: "cannot be blank"},
+ 		uniqueness: { message: "This trail already exists." }
 
 	validates :start_point,
 		presence: { message: "cannot be blank"}
@@ -16,7 +17,7 @@ class Trail < ApplicationRecord
 	def check_associated(params)
 		binding.pry
 		@hikes = Hikes.find_by(trail_id: params[:id])
-		if @hikes != nil
+		if (@hikes != nil)
 			flash[:notice] = "Trails with asscociated hikes cannot be deleted!"
 		end
 		return @hikes
