@@ -6,21 +6,26 @@ module TrailsHelper
 			@hikes.nil? && @images.nil? ?  false : true
 		end
 
-		def handle_associated
-			if associated == "false"
+		def handle_associated(associated)
+			if associated == false
 				delete_trail
 			elsif (!@hikes.nil?)
-				return flash[:notice] = "Trails with associated hikes cannot be deleted!"
+				handle_trail_with_associated_hikes
 			else
-				handle_associated_images
+				handle_trail_with_associated_images
 			end
 		end
 
-		def handle_associated_images
+		def handle_trail_with_associated_hikes
+			return flash[:notice] = "Trails with associated hikes cannot be deleted!"
+		end
+
+		def handle_trail_with_associated_images
 			flash[:notice] = "Deleting this trail will also delete related images. Would you like to proceed?"
 			binding.pry
 			if (response == true?)
 				delete_images
+				delete_trail
 			end
 		end
 
