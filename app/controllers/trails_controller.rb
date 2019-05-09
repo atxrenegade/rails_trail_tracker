@@ -41,7 +41,6 @@ class TrailsController < ApplicationController
 	def destroy
 		@trail = Trail.find_by(id: params[:id])
 		associated = check_associated(params)
-		binding.pry
 		handle_associated(associated)
 		if @trail.nil?
 			redirect_to trails_path
