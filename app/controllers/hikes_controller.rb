@@ -47,13 +47,13 @@ class HikesController < ApplicationController
 
 	def destroy
 		@hike = Hike.find_by(id: params[:id])
-		if check_associated == false
-			@hike.destroy
+		delete_hike_and_images
+		if @hike.destroyed?
+			flash[:notice] = "Hike successfully deleted!"
+			redirect_to hikes_path
 		else
-			delete_associated_images
-			@hike.destroy
+			redirect_to hike_path(@hike)
 		end
-		redirect_to hikes_path
 	end
 
 	private

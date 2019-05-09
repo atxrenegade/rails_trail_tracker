@@ -11,17 +11,15 @@ module HikesHelper
 	end
 
 	def public_user(hike)
+		#retrieves username for recent hikes
 		 User.find_by(id: hike.user_id).name
 	end
 
-	def check_associated
-		@images = Image.where(hike_id: @hike.id)
-
-	end
-
-	def delete_associated_images
-		@images.destroy
-		flash[:notice] = "Hike and Images Deleted!"
+	def delete_hike_and_images
+		#calling second sql query to confirm the correct images will be deleted
+		@images = Image.find_by(trail_name: @trail.name)
+		@images.destroy if !@images.nil?
+		@trail.destroy
 	end
 
 	def collect_recent_hikes
