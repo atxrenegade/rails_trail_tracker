@@ -1,5 +1,11 @@
 <div class="container-info">
 	<h2 class="font-weight-light text-center text-lg-left mt-4 mb-0">Hike Details</h2>
+	<div class="image">
+		<% if flash[:notice] %>
+				<h4>
+					<div class="notice" style="color:red;"><%= flash[:notice]%></div>
+				</h4>
+		<% end %>
 	<div class="row">
 		<div class="col-sm-8">
 			<br>
@@ -24,7 +30,7 @@
 			<%= link_to "Add Image", [:new, @imageable, :image], class:"btn btn-success btn-lg btn-block" %>
 			<%= link_to "Record New Hike", new_hike_path, class:"btn btn-success btn-lg btn-block" %>
 			<%= link_to "Edit This Hike", edit_hike_path(@hike), class:"btn btn-success btn-lg btn-block" %>
-			<%= link_to "DELETE this Hike", hike_path(@hike), data: {confirm: "Are you sure you want to DELETE this item?", method: "delete" }, class:"btn btn-success btn-lg btn-block" %>
+			<%= link_to "DELETE this Hike", hike_path(@hike), data: {confirm: "Are you sure you want to DELETE this HIKE? This will also delete all images of this HIKE!", method: "delete" }, class:"btn btn-success btn-lg btn-block" %>
 			<%= link_to "View All of My Hikes", hikes_path, class:"btn btn-success btn-lg btn-block" %>
 			<%= link_to "Return to Trails Index", trails_path, class:"btn btn-success btn-lg btn-block" %>
 		</div>

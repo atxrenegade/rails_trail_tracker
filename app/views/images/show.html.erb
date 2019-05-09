@@ -1,5 +1,10 @@
 <div class="container-info">
 	<div class="image">
+		<% if flash[:notice] %>
+				<h4>
+					<br><div class="notice" style="color:red;"><%= flash[:notice]%></div>
+				</h4>
+		<% end %>
 		<img src="<%= @image.url %>" class="img-fluid non-gallery"><br><br>
 		<div class="row">
 			<div class="col-sm-8">

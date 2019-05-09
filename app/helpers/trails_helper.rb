@@ -1,7 +1,7 @@
 module TrailsHelper
 
 		def handle_associated(params)
-			@hikes = Hike.find_by(trail_id: params[:id])
+			@hikes = Hike.find_by(hike_id: params[:id])
 			@images = Image.find_by(trail_name: @trail.name)
 			if !@hikes.nil?
 				handle_trail_with_associated_hikes

@@ -17,9 +17,9 @@ module HikesHelper
 
 	def delete_hike_and_images
 		#calling second sql query to confirm the correct images will be deleted
-		@images = Image.find_by(trail_name: @trail.name)
+		@images = Image.find_by(hike_id: @hike.id)
 		@images.destroy if !@images.nil?
-		@trail.destroy
+		@hike.destroy
 	end
 
 	def collect_recent_hikes
