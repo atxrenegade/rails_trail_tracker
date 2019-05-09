@@ -3,6 +3,11 @@
 		<div class="col-sm-8">
 			<h2 class="font-weight-light text-center text-lg-left mt-4 mb-0">Trails Index</h2>
 			<br>
+			<% if flash[:notice] %>
+					<h4>
+						<div class="notice" style="color:red;"><%= flash[:notice]%></div>
+					</h4>
+			<% end %>
 			<ul>
 				<% @trails.each do |trail| %>
 					<li><%= link_to trail.name, trail_path(trail) %></li>

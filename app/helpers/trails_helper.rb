@@ -1,43 +1,25 @@
 module TrailsHelper
 
-		def check_associated(params)
+		def handle_associated(params)
 			@hikes = Hike.find_by(trail_id: params[:id])
 			@images = Image.find_by(trail_name: @trail.name)
-			@hikes.nil? && @images.nil? ?  false : true
-		end
-
-		def handle_associated(associated)
-			if associated == false
-				delete_trail
-			elsif (!@hikes.nil?)
+			if !@hikes.nil?
 				handle_trail_with_associated_hikes
 			else
-				handle_trail_with_associated_images
+				delete_trail
 			end
 		end
+
 
 		def handle_trail_with_associated_hikes
 			return flash[:notice] = "Trails with associated hikes cannot be deleted!"
 		end
 
-		def handle_trail_with_associated_images
-			flash[:notice] = "Deleting this trail will also delete related images. Would you like to proceed?"
-			binding.pry
-			if (response == true?)
-				delete_images
-				delete_trail
-			end
-		end
 
 		def delete_trail
+			#calling second sql query to confirm the correct images will be deleted
+			@images = Image.find_by(trail_name: @trail.name)
+			@images.destroy if !@images.nil?
 			@trail.destroy
-		end
-
-		def delete_images
-			@images.destroy
-		end
-
-		def delete_hike
-			@hike.destroy
 		end
 end

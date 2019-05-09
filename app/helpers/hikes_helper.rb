@@ -16,10 +16,7 @@ module HikesHelper
 
 	def check_associated
 		@images = Image.where(hike_id: @hike.id)
-		if (@images != nil)
-			flash[:notice] = "Deleting this hike will also delete associated images!\n Would you like to continue?"
-		end
-		return false
+
 	end
 
 	def delete_associated_images
