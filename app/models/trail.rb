@@ -17,7 +17,7 @@ class Trail < ApplicationRecord
 	def check_associated(params)
 		@hikes = Hikes.find_by(trail_id: params[:id])
 		if (@hikes != nil)
-			flash[:notice] = "Trails with asscociated hikes cannot be deleted!"
+			flash[:notice] = "Trails with associated hikes cannot be deleted!"
 		end
 		return @hikes
 	end
