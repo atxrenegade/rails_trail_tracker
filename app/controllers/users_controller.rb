@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 		@imageable = @user
 		@images = @imageable.images
 		@image = Image.new
+		render :show
   end
 
 	def new

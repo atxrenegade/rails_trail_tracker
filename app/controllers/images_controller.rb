@@ -20,7 +20,7 @@ class ImagesController < ApplicationController
 		@image = @imageable.images.new(params[:images])
 		check_image_type
 		build_image_params(params)
-		@image = Image.create!(@image_params)
+		@image = Image.create(@image_params)
 		if @image.save
 			path = show_image_path
 			redirect_to path, notice: "Image Saved!"
