@@ -10,8 +10,12 @@
 			<div class="col-sm-8">
 				<p>
 					Date: <%= @image.date %><br>
-					Trail: <%= @image.trail_name %><br>
-					Description: <%= @image.description %><br>
+					<% if @image.trail_name != 'n/a'%>
+						Trail: 	<%= @image.trail_name %><br>
+					<% end %>
+					<% if !@image.description.blank? %>
+						Description: <%= @image.description %><br>
+					<% end %>
 					Posted By: <%= @image.username %><br><br>
 				</p>
 			</div>
