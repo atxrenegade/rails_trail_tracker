@@ -7,10 +7,9 @@ Rails.application.routes.draw do
 		resources :images
   end
 
-  resources :users, only: [:show] do
+  resources :users do
 		resources :images
   end
-
 
 	get '/', to:'sessions#new'
 	get '/welcome', to: 'sessions#welcome'

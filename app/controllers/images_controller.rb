@@ -30,7 +30,9 @@ class ImagesController < ApplicationController
   end
 
   def edit
-		@image = @imageable.images.find_by_id(params[:id])
+		if @image.nil?
+			@image = @imageable.images.find_by_id(params[:id])
+		end
 		render :edit
   end
 
@@ -56,6 +58,7 @@ class ImagesController < ApplicationController
 	def load_imageable
 		resource, id = request.path.split('/')[1,2]
 		@imageable = resource.singularize.classify.constantize.find(id)
+		@image = profile_pic if resource == "users"
 	end
 
 	def image_params

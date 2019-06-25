@@ -3,4 +3,8 @@ module UsersHelper
 		#default profile picture
 		"http://cmhipocrates.com/assets/img/default-profile-picture.jpg"
 	end
+
+	def set_image
+		@image = @profile_pic
+	end	
 end
