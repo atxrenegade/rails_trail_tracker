@@ -1,10 +1,10 @@
-#Trail Tracker Application
+# Trail Tracker Application
 
 	description and purpose of application
 
 	Sign up and/or Login to follow the easy to use menu options to create, review, edit or delete
 
-##Getting Started
+## Getting Started
 
     Download from github repo and install on local server.
 
@@ -13,11 +13,11 @@
     For existing users sign in using existing username and password.
 		#description of how to use application
 
-##Prerequisites
+## Prerequisites
 
 	Safari/Firefox or Google Chrome Browsers
 
-##Installing
+## Installing
 
 	To install this program locally.
 
@@ -26,23 +26,23 @@
 
 	    Navigate to root page on local server
 
-##Built With
-	*ruby '2.3.3'
-	*bootstrap
-	*figaro
-	*omniauth
-	*omniauth-facebook
-	*rails ~> 5.2.1
-	*sqlite3
-	*bcrypt ~> 3.1.7
+## Built With
+	* ruby '2.3.3'
+	* bootstrap
+	* figaro
+	* omniauth
+	* omniauth-facebook
+	* rails ~> 5.2.1
+	* sqlite3
+	* bcrypt ~> 3.1.7
 
-##Authors
+## Authors
     Harleigh Abel - ATXRenegade
 
-##License
+## License
 
 	This project is licensed under the MIT License - see the LICENSE.md file for details
 
-##Acknowledgments:
+## Acknowledgments:
 
     Photographer(s):
