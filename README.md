@@ -15,7 +15,7 @@
 
 ## Prerequisites
 
-	Safari/Firefox or Google Chrome Browsers
+	Safari/Firefox/Google Chrome Browsers
 
 ## Installing
 
@@ -46,3 +46,5 @@
 ## Acknowledgments:
 
     Photographer(s):
+			Anastasia Petrova
+			https://unsplash.com/@anastasia_p
