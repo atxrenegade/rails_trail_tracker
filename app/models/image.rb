@@ -3,7 +3,7 @@ class Image < ApplicationRecord
 
 
 	validates :date,
-		format: { with: /[0-1]{1}[0-9]{1}\/[0-3]{1}[0-9]{1}\/\d{2}/, message: " - Please Enter Valid Date Format" },
+		format: { with: /[0-1]{1}[0-9]{1}\/[0-3]{1}[0-9]{1}\/\d{2}\z/, message: " - Please Enter Valid Date Format" },
 		presence: true
 
 	validates :url,
