@@ -12,7 +12,7 @@ class Trail < ApplicationRecord
 
 	validates :difficulty_rating,
 		presence: true,
-		format: { with: /[1-5]{1}/, message: " - Please Enter a Valid Number" }
+		format: { with: /\A[1-5]\z/, message: " - Please Enter a Valid Number" }
 
 	def check_associated(params)
 		@hikes = Hikes.find_by(trail_id: params[:id])

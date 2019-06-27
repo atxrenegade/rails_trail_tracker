@@ -24,7 +24,7 @@
 		</div>
 
 		<div class="form-group row field_with_errors">
-			<%= f.label "Difficulty Rating 1-5 	(1 = easy, 5 = difficult)", class:"col-sm-8 col-form-label" %>
+			<%= f.label :difficulty_rating, "Difficulty Rating 1-5 	(1 = easy, 5 = difficult)", class:"col-sm-8 col-form-label" %>
 			<div class="col-sm-12">
 				<%= f.text_field :difficulty_rating, class:"form-control" %>
 			</div>
@@ -61,4 +61,4 @@
 			<%= f.submit "Save Trail", class:"btn btn-primary" %><br><br>
 		</div>
 	<% end %>
-	</div>	
+	</div>
