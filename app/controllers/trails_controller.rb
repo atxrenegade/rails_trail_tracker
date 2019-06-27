@@ -41,12 +41,6 @@ class TrailsController < ApplicationController
 	def destroy
 		@trail = Trail.find_by(id: params[:id])
 		handle_associated(params)
-		if @trail.destroyed?
-			flash[:notice] = "Trail successfully deleted!"
-			redirect_to trails_path
-		else
-			redirect_to trail_path(@trail)
-		end
 	end
 
 	private
