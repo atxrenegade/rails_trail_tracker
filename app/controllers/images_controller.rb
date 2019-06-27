@@ -3,6 +3,7 @@ class ImagesController < ApplicationController
 
 	before_action :load_imageable, :except => [:gallery]
 
+
   def index
 		@images = @imageable.images
   end
@@ -51,7 +52,11 @@ class ImagesController < ApplicationController
   end
 
 	def gallery
-		render 'shared/_all_images'
+		if current_user
+			render 'shared/_all_images'
+		else
+			require_user
+		end
 	end
 
 	private
