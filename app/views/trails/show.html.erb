@@ -2,7 +2,7 @@
 	<h2 class="font-weight-light text-center text-lg-left mt-4 mb-0"><%= @trail.name%></h2><br>
 	<% if flash[:notice] %>
 	    <h4>
-				<div class="notice" style="color:red;"><%= flash[:notice]%></div>
+				<div class="notice" style="color:red;"><%= flash.now[:notice]%></div>
 			</h4>
 	<% end %>
 	<div class="row">

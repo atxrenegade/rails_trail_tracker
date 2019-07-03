@@ -35,7 +35,11 @@ class TrailsController < ApplicationController
 	def update
 		@trail = Trail.find_by(id: params[:id])
 		@trail.update(trail_params)
-		redirect_to trail_path(@trail)
+		if @trail.save
+			redirect_to trail_path(@trail)
+		else
+			render :edit
+		end
 	end
 
 	def destroy

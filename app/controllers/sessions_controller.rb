@@ -11,13 +11,13 @@ class SessionsController < ApplicationController
 	  else
 			@user = User.find_by(name: params[:user][:name])
 			if !@user || @user.nil?
-				flash[:notice] = "Please enter a valid username"
+				flash.now[:notice] = "Please enter a valid username"
 				render :login
 			elsif @user && @user.authenticate(params[:user][:password])
 				session[:user_id] = @user[:id]
 				redirect_to '/welcome'
 			else
-				flash[:notice] = "Please enter the correct password"
+				flash.now[:notice] = "Please enter the correct password"
 				render :login
 			end
 		end
