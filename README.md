@@ -1,8 +1,8 @@
 # Trail Tracker Application
 
-	description and purpose of application
+	XXXXXX description and purpose of application
 
-	Sign up and/or Login to follow the easy to use menu options to create, review, edit or delete
+	XXXXXX Sign up and/or Login to follow the easy to use menu options to create, review, edit or delete
 
 ## Getting Started
 
@@ -11,7 +11,8 @@
     For new users sign up with username, password and email. Please NOTE: There is no password recovery functionality at this time so be mindful and remember your password.
 
     For existing users sign in using existing username and password.
-		#description of how to use application
+
+		XXXXXXX description of how to use application
 
 ## Prerequisites
 
@@ -23,7 +24,6 @@
 
 	    Download Repo
 	    Run bundle install from command line
-
 	    Navigate to root page on local server
 
 ## Built With
