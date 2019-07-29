@@ -15,39 +15,39 @@
 
 ## Getting Started
 
-		-Download from github repo and install on local server.
+-Download from github repo and install on local server.
 
-		-For new users sign up with username, password and email.
+-For new users sign up with username, password and email.
 
 		Please NOTE: There is no password recovery functionality at this time so be mindful
 		and remember your password.
 
 ## How to Use this Application
 ######  **Sign up**
-		-There is are two methods for new users to sign up, through either the basic
-		sign up form on the sign up page, or click the link "Sign Up/Log in with
-		Facebook" to use facebook ominauth sign up.
+-There is are two methods for new users to sign up, through either the basic
+sign up form on the sign up page, or click the link "Sign Up/Log in with
+Facebook" to use facebook ominauth sign up.
 
-		-To sign up as a new user from the root directory click the link "Are you a
-		new user? Sign up here."  Once you have reached the basic sign up form
-		users must provide a unique username, an email address that has not been
-		previously registered and a valid password, the password must be entered
-		correctly for confirmation a second time to complete the process.
+-To sign up as a new user from the root directory click the link "Are you a
+new user? Sign up here."  Once you have reached the basic sign up form
+users must provide a unique username, an email address that has not been
+previously registered and a valid password, the password must be entered
+correctly for confirmation a second time to complete the process.
 
-		-To sign up through facebook/ominauth new users will be asked to be
-		currently signed or to sign in to a valid facebook account.
+-To sign up through facebook/ominauth new users will be asked to be
+currently signed or to sign in to a valid facebook account.
 
 ######  **Log in**
 
-		-To successfully sign in to an existing account you have the option to
-		enter a valid username and password on the root page and you will be
-		redirected to the Welcome page once signed in. The Welcome page can still
-		be accessed without logging in but all other pages will redirect user to
-		the login page.
+-To successfully sign in to an existing account you have the option to
+enter a valid username and password on the root page and you will be
+redirected to the Welcome page once signed in. The Welcome page can still
+be accessed without logging in but all other pages will redirect user to
+the login page.
 
-		-The optional method is to be signed into and previously authorized through
-		facebook. Or to click the link "Sign Up/Log in with Facebook" and sign into
-		the previously authorized facebook account again.
+-The optional method is to be signed into and previously authorized through
+facebook. Or to click the link "Sign Up/Log in with Facebook" and sign into
+the previously authorized facebook account again.
 
 
 ###### **Profile**
