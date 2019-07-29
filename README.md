@@ -1,22 +1,22 @@
 # Trail Tracker Application
 
-	The Trail Tracker app is an easy to use, straight-forward application created
-	to help hikers and outdoor enthusiasts to document and share trail locations,
-	details and photos.  It allows users to record and share hikes on these
-	trails, and to view other users recent public hikes and public gallery images.
+		The Trail Tracker app is an easy to use, straight-forward application created to help hikers and outdoor enthusiasts to document and share trail
+		locations, details and photos.  It allows users to record and share hikes
+		on these trails, and to view other users recent public hikes and public
+		gallery images.
 
-	Future functionality for Trail Tracker will allow users to add comments to
-	trails and using google maps geo-encoding to get directions to trails saved
-	in the app and view their hiking progress on them.
+		Future functionality for Trail Tracker will allow users to add comments to
+		trails and using google maps geo-encoding to get directions to trails saved
+		in the app and view their hiking progress on them.
 
-	The top navigation bar or nav buttons on each page have been created to
-	easily move between create, review, edit or delete functionalities.
+		The top navigation bar or nav buttons on each page have been created to
+		easily move between create, review, edit or delete functionalities.
 
 ## Getting Started
 
-    Download from github repo and install on local server.
+		Download from github repo and install on local server.
 
-    For new users sign up with username, password and email.
+		For new users sign up with username, password and email.
 
 		Please NOTE: There is no password recovery functionality at this time so be
 		mindful and remember your password.
@@ -74,7 +74,8 @@
 	 	### Logout
 
 		### Top Nav
-		The top nav bar allows for rapid navigation to the users Trails, Hikes, Profile, Gallery, and Home pages, and to quick Logout button.
+		The top nav bar allows for rapid navigation to the users Trails, Hikes,
+		zProfile, Gallery, and Home pages, and to quick Logout button.
 
 
 ## Prerequisites
@@ -89,25 +90,25 @@
 	    Run bundle install from command line
 	    Navigate to root page on local server
 
-## Built With
-	* ruby '2.3.3'
-	* bootstrap
-	* figaro
-	* omniauth
-	* omniauth-facebook
-	* rails ~> 5.2.1
-	* sqlite3
-	* bcrypt ~> 3.1.7
+	## Built With
+		* ruby '2.3.3'
+		* bootstrap
+		* figaro
+		* omniauth
+		* omniauth-facebook
+		* rails ~> 5.2.1
+		* sqlite3
+		* bcrypt ~> 3.1.7
 
-## Authors
-    Harleigh Abel - ATXRenegade
+	## Authors
+	    Harleigh Abel - ATXRenegade
 
-## License
+	## License
 
-	This project is licensed under the MIT License - see the LICENSE.md file for details
+		This project is licensed under the MIT License - see the LICENSE.md file for details
 
-## Acknowledgments:
+	## Acknowledgments:
 
-    Photographer(s):
-			Anastasia Petrova
-			https://unsplash.com/@anastasia_p
+	    Photographer(s):
+				Anastasia Petrova
+				https://unsplash.com/@anastasia_p
