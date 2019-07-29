@@ -1,6 +1,7 @@
 # Trail Tracker Application
 
-		The Trail Tracker app is an easy to use, straight-forward application created to help hikers and outdoor enthusiasts to document and share trail
+		The Trail Tracker app is an easy to use, straight-forward application created
+		to help hikers and outdoor enthusiasts to document and share trail
 		locations, details and photos.  It allows users to record and share hikes
 		on these trails, and to view other users recent public hikes and public
 		gallery images.
@@ -22,7 +23,7 @@
 		mindful and remember your password.
 
 ## How to Use this Application
-		###  Sign up
+		######  **Sign up**
 		There is are two methods for new users to sign up, through either the basic
 		sign up form on the sign up page, or click the link "Sign Up/Log in with
 		Facebook" to use facebook ominauth sign up.
@@ -36,7 +37,7 @@
 		To sign up through facebook/ominauth new users will be asked to be
 		currently signed or to sign in to a valid facebook account.
 
-	 	###  Log in
+	 	######  **Log in**
 
 		To successfully sign in to an existing account you have the option to
 		enter a valid username and password on the root page and you will be
@@ -49,33 +50,33 @@
 		the previously authorized facebook account again.
 
 
-	  ###  Profile
+	  ######  **Profile**
 		 -add custom profile pic
 		 -update profile pic
 
-		### Trails
+		###### **Trails**
 		 -create trail
 		 -view trail
 		 -edit trail
 		 -delete trail
 
-		### Hikes
+		###### **Hikes**
 		 -create hike
 		 -view hike
 		 -edit hike
 		 -delete hike
 
-		### Images
+		###### **Images**
 		 -add image
 		 -show image
 		 -edit image
 		 -delete image
 
-	 	### Logout
+	 	###### **Logout**
 
-		### Top Nav
+		###### **Top Nav**
 		The top nav bar allows for rapid navigation to the users Trails, Hikes,
-		zProfile, Gallery, and Home pages, and to quick Logout button.
+		Profile, Gallery, and Home pages, and to a quick Logout button.
 
 
 ## Prerequisites
@@ -100,15 +101,14 @@
 		* sqlite3
 		* bcrypt ~> 3.1.7
 
-	## Authors
-	    Harleigh Abel - ATXRenegade
+## Authors
+	  Harleigh Abel - ATXRenegade
 
-	## License
-
+## License
 		This project is licensed under the MIT License - see the LICENSE.md file for details
 
-	## Acknowledgments:
+## Acknowledgments:
 
-	    Photographer(s):
-				Anastasia Petrova
-				https://unsplash.com/@anastasia_p
+    Photographer(s):
+			Anastasia Petrova
+			[https://unsplash.com/@anastasia_p](https://unsplash.com/@anastasia_p)
