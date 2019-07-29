@@ -23,7 +23,7 @@
 		mindful and remember your password.
 
 ## How to Use this Application
-		######  **Sign up**
+######  **Sign up**
 		There is are two methods for new users to sign up, through either the basic
 		sign up form on the sign up page, or click the link "Sign Up/Log in with
 		Facebook" to use facebook ominauth sign up.
@@ -37,7 +37,7 @@
 		To sign up through facebook/ominauth new users will be asked to be
 		currently signed or to sign in to a valid facebook account.
 
-	 	######  **Log in**
+######  **Log in**
 
 		To successfully sign in to an existing account you have the option to
 		enter a valid username and password on the root page and you will be
@@ -50,31 +50,27 @@
 		the previously authorized facebook account again.
 
 
-	  ######  **Profile**
+###### **Profile**
 		 -add custom profile pic
 		 -update profile pic
-
-		###### **Trails**
+###### **Trails**
 		 -create trail
 		 -view trail
 		 -edit trail
 		 -delete trail
-
-		###### **Hikes**
+###### **Hikes**
 		 -create hike
 		 -view hike
 		 -edit hike
 		 -delete hike
-
-		###### **Images**
+###### **Images**
 		 -add image
 		 -show image
 		 -edit image
 		 -delete image
 
-	 	###### **Logout**
-
-		###### **Top Nav**
+###### **Logout**
+###### **Top Nav**
 		The top nav bar allows for rapid navigation to the users Trails, Hikes,
 		Profile, Gallery, and Home pages, and to a quick Logout button.
 
@@ -91,7 +87,7 @@
 	    Run bundle install from command line
 	    Navigate to root page on local server
 
-	## Built With
+## Built With
 		* ruby '2.3.3'
 		* bootstrap
 		* figaro
