@@ -16,7 +16,7 @@ easily move between create, review, edit or delete functionalities.
 ## Getting Started
 - Download from github repo and install on local server - For new users sign up with username, password and email.
 
-Please NOTE: There is no password recovery functionality at this time so be mindful
+  Please NOTE: There is no password recovery functionality at this time so be mindful
 and remember your password.
 
 ## How to Use this Application
