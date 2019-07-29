@@ -14,10 +14,10 @@ The top navigation bar or nav buttons on each page have been created to
 easily move between create, review, edit or delete functionalities.
 
 ## Getting Started
-	- Download from github repo and install on local server - For new users sign up with username, password and email.
+- Download from github repo and install on local server - For new users sign up with username, password and email.
 
-		Please NOTE: There is no password recovery functionality at this time so be mindful
-		and remember your password.
+Please NOTE: There is no password recovery functionality at this time so be mindful
+and remember your password.
 
 ## How to Use this Application
 ######  **Sign up**
@@ -69,13 +69,14 @@ the previously authorized facebook account again.
 ###### **Logout**
 - Logging out can be easily accomplished by clicking the Logout option
 in the Top Nav Bar or by logging out
+
 ###### **Top Nav**
 - The top nav bar allows for rapid navigation to the users Trails, Hikes,
 Profile, Gallery, and Home pages, and to a quick Logout button.
 
 ## Prerequisites
 
-	Safari/Firefox/Google Chrome Browsers
+Safari/Firefox/Google Chrome Browsers
 
 ## Installing
 
@@ -99,7 +100,7 @@ To install this program locally:
   Harleigh Abel - ATXRenegade
 
 ## License
-	This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
 ## Acknowledgments:
 
