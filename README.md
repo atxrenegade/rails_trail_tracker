@@ -49,31 +49,31 @@ previously authorized facebook account again.
 
 ###### **Trails**
 Clicking on Trails in the top nav bar will bring you to a current index of trails saved by all users
- - create trail - to create a new trail click on the "Create New Trail" button
+ - **create trail** - to create a new trail click on the "Create New Trail" button
  and enter the correct information and format for the trail.  Name, Starting Point and and Difficulty Rating are mandatory fields. All others are optional.
  Once data has been entered using the correct format, click on the "Save Trail"
  button to persist it to the database. Once the trail is saved you will be redirected to the view page for the new trail.
- - view trail - to view an existing trail, use top nav to load the Trails index and select the trail you would like to view or edit.
- - edit trail - select the trail you would like to edit from the Trail index, use the "Edit this Trail button" to navigate to the edit form, click "Save Trail" to persist your trail updates to the database.
- - delete trail - If other users have hikes associated with a trail you are trying to delete, the trail CANNOT be deleted.  If you would like to delete a trail select the trail from the trail index page, once you are on the view page for a specific trail you can use the "DELETE this Trail" button to delete it.  When you click on the button you will see a secondary warning pop up in the dialog box asking for confirmation, if you would proceed click yes and you should be rerouted to the Trail directory and see the message "Trail successfully deleted". If they are associated hikes the delete process will not be successful, if you have images of this trail stored in the gallery, you will be asked for additional confirmation before all related images are deleted.
+ - **view trail** - to view an existing trail, use top nav to load the Trails index and select the trail you would like to view or edit.
+ - **edit trail** - select the trail you would like to edit from the Trail index, use the "Edit this Trail button" to navigate to the edit form, click "Save Trail" to persist your trail updates to the database.
+ - **delete trail** - If other users have hikes associated with a trail you are trying to delete, the trail CANNOT be deleted.  If you would like to delete a trail select the trail from the trail index page, once you are on the view page for a specific trail you can use the "DELETE this Trail" button to delete it.  When you click on the button you will see a secondary warning pop up in the dialog box asking for confirmation, if you would proceed click yes and you should be rerouted to the Trail directory and see the message "Trail successfully deleted". If they are associated hikes the delete process will not be successful, if you have images of this trail stored in the gallery, you will be asked for additional confirmation before all related images are deleted.
 
 
 ###### **My Hikes**
 Clicking on My Hikes in the top nav bar will bring you to a current index of
 hikes specific to each user, it will also include a list of recent public hikes
 made public by other users.
- - create hike - to create a new hike click on the "Record New Hike" button on the hikes page and enter the correct information and format for the hike. Date
+ - **create hike** - to create a new hike click on the "Record New Hike" button on the hikes page and enter the correct information and format for the hike. Date
  of hike, and selecting the Trail the hike was on from the drop down menu are
  mandatory fields. You will also be given the option of sharing this hike with
  other users. If you would like to make your hike public, check the check box
  provided. Once data has been entered using the correct format, click on the
  "Save Hike" button to save it. Once the hike has been saved you will be
  redirected to the view page for the new hike.
- - view hike - to view an existing hike, use top nav to load the My Hikes index
+ - **view hike** - to view an existing hike, use top nav to load the My Hikes index
  page and select the hike you would like to view or edit.
- - edit hike - select the hike you would like to edit from the My Hikes index,
+ - **edit hike** - select the hike you would like to edit from the My Hikes index,
  and use the "Edit this Hike button" to navigate to the edit form, click "Save hike" to save your changes.
- - delete hike - If you would like to delete a hike, select the hike from the My Hikes index page, once you are on the details page for that specific hike
+ - **delete hike** - If you would like to delete a hike, select the hike from the My Hikes index page, once you are on the details page for that specific hike
  use the "DELETE this Hike" button to delete it. When you click on the button you will see a secondary warning pop up in the dialog box asking for confirmation, if you would proceed click yes and you
  should be rerouted to the hike directory and see the message "Hike
  successfully deleted". If they are associated hikes the delete process will
