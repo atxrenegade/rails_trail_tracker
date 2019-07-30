@@ -44,9 +44,18 @@ facebook. Or to click the link "Sign Up/Log in with Facebook" and sign into the
 previously authorized facebook account again.
 
 ###### **Profile**
- - **add custom profile pic**
- - **update profile pic**
-
+ - **add custom profile pic**- once you have navigated to the profile page
+ using the top nav button you can add a custom profile picture by clicking on
+ the "Add Profile Picture" button. From there you will be redirected to an a
+ image, fill out the fields with the correct format, check the checkbox to make
+ image visible to other users and click "Save Image"
+ - **update profile pic** - the same steps as listed above can be used to update
+an your profile image, but you will see a button marked "Edit Profile Image"
+instead.
+NOTE ABOUT IMAGES: In order to keep this app free to use we do not store images
+in our database. When saving image you will be asked for a URL, we encourage
+you to use one of the many popular photo sharing sites such as - [USE](https://www.use.com/) - [IMGUR](https://imgur.com/) - [PHOTOBUCKET](https://photobucket.com/) - [FLICKR](https://www.flickr.com/) to store your images and copy the URL to share
+them here.
 ###### **Trails**
 Clicking on Trails in the top nav bar will bring you to a current index of trails saved by all users
  - **create trail** - to create a new trail click on the "Create New Trail" button
