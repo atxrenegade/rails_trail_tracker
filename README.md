@@ -52,6 +52,7 @@ previously authorized facebook account again.
  - **update profile pic** - the same steps as listed above can be used to update
 an your profile image, but you will see a button marked "Edit Profile Image"
 instead.
+
 NOTE ABOUT IMAGES: In order to keep this app free to use we do not store images
 in our database. When saving image you will be asked for a URL, we encourage
 you to use one of the many popular photo sharing sites such as - [USE](https://www.use.com/) - [IMGUR](https://imgur.com/) - [PHOTOBUCKET](https://photobucket.com/) - [FLICKR](https://www.flickr.com/) to store your images and copy the URL to share
@@ -91,10 +92,25 @@ made public by other users.
  deleted.
 
 ###### **Images**
- - **add image**
- - **show image**
- - **edit image**
- - **delete image**
+ - **add image** - To add an image navigate to the details page for the Trail or
+ Hike you would like to add the image to.  Click on the "Add Image" button.
+ Fill out the image form with the image date, url and description.  If you would
+ like the image to be viewable in the public gallery as well as your own,
+ select the checkbox "allow this image to be viewable to other users". Leave the
+ checkbox blank if you would like to keep it private.  Complete the process by
+ clicking on the "Save Image" button.
+ - **show image** - images are viewable on your "My Gallery" page and by
+ selecting the detail page for the trail or hike the image is associated with.
+ - **edit image** - To edit an image, go to the image detail page and click the
+ "Edit Image" button, update the details you would like to change and click on
+ "Save Image"
+ - **delete image** -go to the image detail page and click the "Delete Image"
+ button, when the confirmation dialog boxes asks if you are sure, select "Yes"
+
+ NOTE ABOUT IMAGES: In order to keep this app free to use we do not store images
+ in our database. When saving image you will be asked for a URL, we encourage
+ you to use one of the many popular photo sharing sites such as - [USE](https://www.use.com/) - [IMGUR](https://imgur.com/) - [PHOTOBUCKET](https://photobucket.com/) - [FLICKR](https://www.flickr.com/) to store your images and copy the URL to share
+ them here.
 
 ###### **Logout**
 - Logging out can be easily accomplished by clicking the Logout option
