@@ -44,8 +44,8 @@ facebook. Or to click the link "Sign Up/Log in with Facebook" and sign into the
 previously authorized facebook account again.
 
 ###### **Profile**
- - add custom profile pic
- - update profile pic
+ - **add custom profile pic**
+ - **update profile pic**
 
 ###### **Trails**
 Clicking on Trails in the top nav bar will bring you to a current index of trails saved by all users
@@ -82,10 +82,10 @@ made public by other users.
  deleted.
 
 ###### **Images**
- - add image
- - show image
- - edit image
- - delete image
+ - **add image**
+ - **show image**
+ - **edit image**
+ - **delete image**
 
 ###### **Logout**
 - Logging out can be easily accomplished by clicking the Logout option
