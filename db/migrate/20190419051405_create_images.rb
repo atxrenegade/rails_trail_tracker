@@ -6,9 +6,9 @@ class CreateImages < ActiveRecord::Migration[5.2]
       t.string :description
       t.boolean :is_public
       t.string :username
-			t.string :trail_name
-			t.timestamps
-			t.belongs_to :imageable, polymorphic:true
+      t.string :trail_name
+	  t.timestamps
+	  t.belongs_to :imageable, polymorphic:true
     end
 		add_index :images, [:imageable_id, :imageable_type]
   end
