@@ -1,9 +1,7 @@
 TO DO LIST
 
 CORE APP FUNCTIONALITY
--create and test delete associated functionality
 -add privacy page for facebook oauth to function correctly
--fill out documentation
 -fill out landing/welcome page
 -add linked footer
 -center image on image show page
