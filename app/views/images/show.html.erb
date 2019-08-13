@@ -22,6 +22,7 @@
 		<div class="col-sm-4">
 			<%= link_to "Update Image", build_images_path("edit"), class:"btn btn-success btn-lg btn-block" %>
 			<%= link_to "Delete Image", show_image_path, method: :delete, remote: true, data: { confirm: 'Are you certain you want to delete this?' }, class:"btn btn-success btn-lg btn-block" %>
+			<%= link_to "Return to Gallery", '/images/gallery', class:"btn btn-success btn-lg btn-block" %>
 		</div>
 	</div>
 </div>
