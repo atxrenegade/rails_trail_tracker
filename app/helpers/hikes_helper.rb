@@ -15,11 +15,17 @@ module HikesHelper
 		 User.find_by(id: hike.user_id).name
 	end
 
+	def check_ownership
+		@hike.user_id == current_user.id ?  true : false
+	end
+
 	def delete_hike_and_images
 		#calling second sql query to confirm the correct images will be deleted
-		@images = Image.find_by(hike_id: @hike.id)
-		@images.destroy if !@images.nil?
-		@hike.destroy
+		if check_ownership == true
+			@images = Image.find_by(hike_id: @hike.id)
+			@images.destroy if !@images.nil?
+			@hike.destroy
+		end
 	end
 
 	def collect_recent_hikes
