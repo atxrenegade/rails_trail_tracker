@@ -13,6 +13,7 @@ gem 'figaro'
 
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem "omniauth-rails_csrf_protection"
 gem 'dotenv-rails'
 gem 'pry'
 gem 'thin'
