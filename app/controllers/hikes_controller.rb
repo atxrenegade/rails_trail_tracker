@@ -51,7 +51,7 @@ class HikesController < ApplicationController
 		if @hike.destroyed?
 			flash[:notice] = "Hike successfully deleted!"
 		else
-			flash[:notice] = "You can't delete hikes you did not create!"
+			flash[:notice] = "You can not delete hikes that belong to other users!"
 		end
 		redirect_to hikes_path
 	end
