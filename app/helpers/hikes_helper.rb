@@ -1,7 +1,7 @@
 module HikesHelper
 	def build_hike_params(params)
 		user = current_user.id
-	  params["is_public"] == 1 ? is_public = true : is_public = false
+	  params["hike"]["is_public"].to_i == 1 ? is_public = true : is_public = false
 		#can this be simplified using an exisitng helper or method?
 
 		@hike_params = {"date_of_hike": params["hike"]["date_of_hike"],
