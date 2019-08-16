@@ -1,7 +1,6 @@
 module TrailsHelper
 	def handle_associated(params)
 		@hikes = Hike.find_by(trail_id: params[:id])
-		@images = Image.find_by(trail_name: @trail.name)
 		if !@hikes.nil?
 			@hikes = nil #clearing the value of @hikes
 			redirect_to @trail, notice: "Trails with associated hikes cannot be deleted!"
