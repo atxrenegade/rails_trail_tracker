@@ -1,6 +1,5 @@
 class ImagesController < ApplicationController
 	include ImagesHelper
-
 	before_action :load_imageable, :except => [:gallery]
 
 

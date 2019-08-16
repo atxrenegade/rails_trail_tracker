@@ -1,7 +1,5 @@
 class HikesController < ApplicationController
 	include HikesHelper
-
-
 	before_action :require_user
 
 	def index
