@@ -1,6 +1,6 @@
 class HikesController < ApplicationController
 	include HikesHelper
-	extend HikesHelper
+
 
 	before_action :require_user
 

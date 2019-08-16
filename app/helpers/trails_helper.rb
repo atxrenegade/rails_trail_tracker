@@ -11,7 +11,6 @@ module TrailsHelper
 	end
 
 	def delete_trail
-		#calling second sql query to confirm the correct images will be deleted
 		@images = Image.find_by(trail_name: @trail.name)
 		@images.destroy if !@images.nil?
 		@trail.destroy
