@@ -14,11 +14,4 @@ class Trail < ApplicationRecord
 		presence: true,
 		format: { with: /\A[1-5]\z/, message: " - Please Enter a Valid Number" }
 
-	def check_associated(params)
-		@hikes = Hikes.find_by(trail_id: params[:id])
-		if (@hikes != nil)
-			flash[:notice] = "Trails with associated hikes cannot be deleted!"
-		end
-		return @hikes
-	end
 end
