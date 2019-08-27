@@ -10,7 +10,7 @@
 					<% @recent_hikes = Hike.collect_recent_hikes %>
 					<% @recent_hikes.each do |hike| %>
 							<li><%= link_to(hike) do %>
-								<%= hike.date_of_hike %>  -  <%= hike.trail.name %> - <%= public_user(hike) %> </li>
+								<%= hike.date_of_hike %>  -  <%= hike.trail.name %> - <%= Hike.recent_hike_user_by_name(hike) %> </li>
 							<% end %>
 						<% end %>
 				</ol>

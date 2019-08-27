@@ -15,4 +15,9 @@ class Hike < ApplicationRecord
 	def self.collect_recent_hikes
 		Hike.where(is_public: true).last(5)
 	end
+
+	def self.recent_hike_user_by_name(hike)
+		#retrieves username for recent hikes
+		User.find_by(id: hike.user_id).name
+	end
 end
