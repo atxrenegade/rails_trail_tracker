@@ -37,14 +37,14 @@
 		</div>
 	</div>
 </div><br><br>
-<% collect_user_trail_images %>
+<% @images = Image.collect_user_trail_images %>
 <% if !@images.empty? %>
 	<div class="container">
 	  <h2 class="font-weight-light text-center text-lg-left mt-4 mb-0">My Images of <%=@trail.name%></h2><br>
 		<%= render 'shared/gallery' %>
 	</div><br><br>
 <% end %>
-<% collect_public_trail_images %>
+<% @images = Image.collect_public_trail_images %>
 <% if !@images.empty? %>
 	<div class="container">
 	  <h2 class="font-weight-light text-center text-lg-left mt-4 mb-0">Public Images of <%=@trail.name%></h2><br>

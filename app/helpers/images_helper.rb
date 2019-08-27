@@ -31,30 +31,6 @@ module ImagesHelper
 		end
 	end
 
-	def profile_pic
-		@profile_pic = Image.find_by(username: current_user.name, imageable_type: "User")
-	end
-
-	def collect_user_images
-		@images = Image.where(username: current_user.name).where.not(imageable_type: "User")
-	end
-
-	def collect_user_hike_images
-		@images = Image.where(username: current_user.name).where(hike_id: @hike.id)
-	end
-
-	def collect_user_trail_images
-		@images = Image.where(trail_name: @trail.name).where(username: current_user.name)
-	end
-
-	def collect_public_trail_images
-		@images = Image.where(trail_name: @trail.name).where(is_public: true)
-	end
-
-	def collect_public_images
-		@images = Image.where(is_public: true).where.not(imageable_type: "User")
-	end
-
 	def set_hike_variables
 		@trail_name = Trail.find_by_id(@imageable.trail_id).name
 		@hike_id = @imageable.id
