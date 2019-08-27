@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	DEFAULT_PROFILE_PIC_URL = "http://cmhipocrates.com/assets/img/default-profile-picture.jpg"
 
 	has_secure_password
 	has_many :hikes
@@ -20,7 +21,6 @@ class User < ApplicationRecord
 
 	def self.create_with_omniauth(auth)
 	  user = find_or_create_by(uid: auth['uid'])
-
 	  if user.name != nil
 	    user
 	  else
