@@ -11,4 +11,8 @@ class Hike < ApplicationRecord
 		@images = Image.find_by(hike_id: hike.id)
 		@images.destroy if @images.present?
 	end
+
+	def self.collect_recent_hikes
+		Hike.where(is_public: true).last(5)
+	end
 end

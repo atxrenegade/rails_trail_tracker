@@ -13,8 +13,4 @@ module HikesHelper
 		#retrieves username for recent hikes
 		 User.find_by(id: hike.user_id).name
 	end
-
-	def collect_recent_hikes
-		@recent_hikes = Hike.where(is_public: true).last(5)
-	end
 end

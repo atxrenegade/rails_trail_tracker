@@ -49,7 +49,6 @@ class HikesController < ApplicationController
 			Hike.delete_hike_images(@hike)
 			@hike.delete
 		end
-		binding.pry
 		if @hike.destroyed?
 			flash[:notice] = "Hike successfully deleted!"
 		else
