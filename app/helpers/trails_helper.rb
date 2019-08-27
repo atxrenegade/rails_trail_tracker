@@ -13,14 +13,9 @@ module TrailsHelper
 			@hikes = nil #clearing the value of @hikes
 			redirect_to @trail, notice: "Trails with associated hikes cannot be deleted!"
 		else
-			delete_images
+			Trail.delete_trail_images(@trail)
 			@trail.delete
 			redirect_to trails_path, notice: "Trail successfully deleted!"
 		end
-	end
-
-	def delete_images
-		@images = Image.find_by(trail_name: @trail.name)
-		@images.destroy if !@images.nil?
 	end
 end

@@ -14,4 +14,9 @@ class Trail < ApplicationRecord
 		presence: true,
 		format: { with: /\A[1-5]\z/, message: " - Please Enter a Valid Number" }
 
+		def self.delete_trail_images(trail)
+			@images = Image.find_by(trail_name: trail.name)
+			@images.destroy if !@images.nil?
+		end
+
 end
