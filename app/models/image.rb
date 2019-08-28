@@ -12,4 +12,8 @@ class Image < ApplicationRecord
 		def self.collect_user_trail_images(trail_name, username)
 			Image.where(trail_name: trail_name).where(username: username)
 		end
+
+		def self.collect_public_images
+			Image.where(is_public: true).where.not(imageable_type: "User")
+		end
 end

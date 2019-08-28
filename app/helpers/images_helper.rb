@@ -62,8 +62,4 @@ module ImagesHelper
 	def collect_public_trail_images
 		Image.where(trail_name: @trail.name).where(is_public: true)
 	end
-
-	def collect_public_images
-		Image.where(is_public: true).where.not(imageable_type: "User")
-	end
 end
