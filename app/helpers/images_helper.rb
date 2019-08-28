@@ -45,9 +45,4 @@ module ImagesHelper
 		@trail_name = 'n/a'
 		@hike_id = 0
 	end
-
-	#methods to refactor as class methods in model
-	def profile_pic
-		Image.find_by(username: current_user.name, imageable_type: "User")
-	end
 end

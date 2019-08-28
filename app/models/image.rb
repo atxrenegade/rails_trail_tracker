@@ -28,4 +28,8 @@ class Image < ApplicationRecord
 		def self.collect_user_trail_images(trail_name, username)
 			Image.where(trail_name: trail_name).where(username: username)
 		end
+
+		def self.profile_pic(username)
+			Image.find_by(username: username, imageable_type: "User")
+		end
 end
