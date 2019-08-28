@@ -36,7 +36,7 @@
 		</div>
 	</div>
 </div><br><br>
-<% collect_user_hike_images %>
+<% @images = Image.collect_user_hike_images(current_user.name, @hike.id) %>
 <% if !@images.empty? %>
 	<div class="container">
 	  <h2 class="font-weight-light text-center text-lg-left mt-4 mb-0">My Images for this Hike<%=@hike.id%></h2><br>

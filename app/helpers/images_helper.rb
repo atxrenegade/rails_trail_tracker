@@ -50,8 +50,4 @@ module ImagesHelper
 	def profile_pic
 		Image.find_by(username: current_user.name, imageable_type: "User")
 	end
-
-	def collect_user_hike_images
-		Image.where(username: current_user.name).where(hike_id: @hike.id)
-	end
 end
