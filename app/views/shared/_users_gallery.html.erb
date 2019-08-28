@@ -1,5 +1,5 @@
 <div class="container">
   <h2 class="font-weight-light text-center text-lg-left mt-4 mb-0">My Gallery</h2><br>
-	<% @images = collect_user_images %>
+	<% @images = Image.collect_user_images(current_user.name) %>
 	<%= render 'shared/gallery' %>
 </div>
