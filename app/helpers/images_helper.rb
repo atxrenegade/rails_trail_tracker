@@ -45,4 +45,29 @@ module ImagesHelper
 		@trail_name = 'n/a'
 		@hike_id = 0
 	end
+
+	#methods to refactor as class methods in model
+	def profile_pic
+		Image.find_by(username: current_user.name, imageable_type: "User")
+	end
+
+	def collect_user_images
+		Image.where(username: current_user.name).where.not(imageable_type: "User")
+	end
+
+	def collect_user_hike_images
+		Image.where(username: current_user.name).where(hike_id: @hike.id)
+	end
+
+	def collect_user_trail_images
+		Image.where(trail_name: @trail.name).where(username: current_user.name)
+	end
+
+	def collect_public_trail_images
+		Image.where(trail_name: @trail.name).where(is_public: true)
+	end
+
+	def collect_public_images
+		Image.where(is_public: true).where.not(imageable_type: "User")
+	end
 end

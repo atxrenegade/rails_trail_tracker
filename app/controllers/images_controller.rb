@@ -2,7 +2,6 @@ class ImagesController < ApplicationController
 	include ImagesHelper
 	before_action :load_imageable, :except => [:gallery]
 
-
   def index
 		@images = @imageable.images
   end

@@ -18,5 +18,4 @@ class Trail < ApplicationRecord
 			@images = Image.find_by(trail_name: trail.name)
 			@images.destroy if !@images.nil?
 		end
-
 end

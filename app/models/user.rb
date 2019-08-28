@@ -32,8 +32,4 @@ class User < ApplicationRecord
 	  end
 		@user = user
 	end
-
-	def self.user_by_name
-		User.find(session[:user_id]).name
-	end
 end
