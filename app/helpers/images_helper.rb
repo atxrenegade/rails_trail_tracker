@@ -58,8 +58,4 @@ module ImagesHelper
 	def collect_user_hike_images
 		Image.where(username: current_user.name).where(hike_id: @hike.id)
 	end
-
-	def collect_public_trail_images
-		Image.where(trail_name: @trail.name).where(is_public: true)
-	end
 end

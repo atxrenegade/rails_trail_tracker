@@ -44,7 +44,7 @@
 		<%= render 'shared/gallery' %>
 	</div><br><br>
 <% end %>
-<% @images = collect_public_trail_images %>
+<% @images = Image.collect_public_trail_images(@trail.name) %>
 <% if !@images.empty? %>
 	<div class="container">
 	  <h2 class="font-weight-light text-center text-lg-left mt-4 mb-0">Public Images of <%=@trail.name%></h2><br>
