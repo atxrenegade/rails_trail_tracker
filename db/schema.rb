@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2019_04_30_041125) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "hikes", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "trail_id"
+    t.bigint "user_id"
+    t.bigint "trail_id"
     t.string "date_of_hike"
     t.text "comments"
     t.boolean "is_public"
@@ -34,7 +37,7 @@ ActiveRecord::Schema.define(version: 2019_04_30_041125) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "imageable_type"
-    t.integer "imageable_id"
+    t.bigint "imageable_id"
     t.integer "hike_id", default: 0
     t.index ["imageable_id", "imageable_type"], name: "index_images_on_imageable_id_and_imageable_type"
     t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
