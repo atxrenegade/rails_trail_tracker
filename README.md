@@ -1,4 +1,5 @@
 # Trail Tracker Application
+![Trail Tracker Screen Shot](https://github.com/atxrenegade/rails_trail_tracker/blob/master/public/TrailTrackerScreenShot.png)
 
 The Trail Tracker app is an easy to use, straight-forward application created
 to help hikers and outdoor enthusiasts to document and share trail
